@@ -16,6 +16,16 @@ class VenuesController < ApplicationController
     def show
         @venue = Venue.find_by_id(params[:id])
     end
+    
+    def edit
+        @venue = Venue.find(params[:id])
+    end
+
+    def update
+        @venue = Venue.find(params[:id])
+        @venue.update(venue_params)
+        redirect_to venue_path(@venue)
+    end
 
     private
 
