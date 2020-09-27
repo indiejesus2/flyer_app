@@ -1,0 +1,9 @@
+<h1><%= venue.name %></h1>
+
+<p><%= venue.location %></p>
+<p><%= venue.crowd_capacity %></p>
+<% if venue.parking == true %>
+<p>On-site Parking</p>
+<% else %>
+<p>No Parking</p>
+<% end %>

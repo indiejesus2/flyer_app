@@ -1,10 +1,5 @@
 <h1>Venues</h1>
 
 <% @venues.each do |venue| %>
-<h3><%= venue.name %></h3>
-<ul>
-    <li><%= venue.location %></li>
-    <li><%= venue.crowd_capacity %></li>
-    <li><%= venue.parking %></li>
-</ul>
+<%= render partial: "venue", locals: {venue: venue} %>
 <% end %>
