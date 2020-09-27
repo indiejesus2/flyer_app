@@ -1,5 +1,6 @@
 <h1>Venues</h1>
-
+<%= link_to 'New Venue', new_venue_path %>
+<br><br>
 <% @venues.each do |venue| %>
-<%= render partial: "venue", locals: {venue: venue} %>
+<h3><%= link_to venue.name, venue_path(venue) %> <br></h3>
 <% end %>
