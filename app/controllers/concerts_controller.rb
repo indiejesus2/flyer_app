@@ -1,4 +1,5 @@
 class ConcertsController < ApplicationController
+    before_action :set_band
 
     def new
         @concert = Concert.new
@@ -7,11 +8,11 @@ class ConcertsController < ApplicationController
 
     def create
         @concert = Concert.new(concert_params)
-
+        @concert.band = @band
         if @concert.save
-            render concert_part(@concert)
+            redirect_to concert_path(@concert)
         else
-            redirect_to :new
+            render :new
         end
 
     end
@@ -29,6 +30,10 @@ class ConcertsController < ApplicationController
 
     def concert_params
         params.require(:concert).permit(:date, :admission, :venue_id)
+    end
+
+    def set_band
+        @band = Band.first
     end
 
 end
