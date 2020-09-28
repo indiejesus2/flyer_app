@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :concerts
 
   resources :bands
+  
   resources :venues do
     resources :concerts
   end

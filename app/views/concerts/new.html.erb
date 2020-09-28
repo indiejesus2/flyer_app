@@ -9,12 +9,12 @@
     <% else %>
     <h3>New Venue</h3>
     <%= f.fields_for :venue, Venue.new do |v| %>
-    <%= v.text_field :name %>
-    <%= v.text_field :location %>
-    <%= v.number_field :crowd_capacity %>
-    <%= check_box("venue", "parking", {}, "yes", "no") %>
+    Name: <%= v.text_field :name %>
+    Location: <%= v.text_field :location %>
+    Crowd Capacity: <%= v.number_field :crowd_capacity %>
+    Parking? Yes<%= check_box("venue", "parking", {}, "yes", "no") %>
     <% end %>
-    <p><%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p>
+    <p>Venues <%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p>
     <br><br>
     <% end %>
     <%= f.submit %>

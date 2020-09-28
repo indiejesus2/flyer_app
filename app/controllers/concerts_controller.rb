@@ -1,5 +1,9 @@
 class ConcertsController < ApplicationController
-    before_action :set_band
+    before_action :set_band, only: [:new, :create]
+
+    def index
+        @concerts = Concert.all
+    end
 
     def new
         @concert = Concert.new
@@ -29,7 +33,7 @@ class ConcertsController < ApplicationController
     private
 
     def concert_params
-        params.require(:concert).permit(:date, :admission, :venue_id)
+        params.require(:concert).permit(:date, :admission, :venue_id, venue_attributes: [:name, :location, :crowd_capacity, :parking])
     end
 
     def set_band
