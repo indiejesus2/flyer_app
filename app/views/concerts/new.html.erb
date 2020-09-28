@@ -1,0 +1,21 @@
+<h1>New Concert</h1>
+
+<%= form_for @concert do |f| %>
+    Date: <%= f.date_field :date %>
+    Admission: <%= f.number_field :admission %>
+    <br>
+    <% if @venue_id || @concert.id %>
+    <%= f.hidden_field :venue_id, value: @venue_id %>
+    <% else %>
+    <h3>New Venue</h3>
+    <%= f.fields_for :venue, Venue.new do |v| %>
+    <%= v.text_field :name %>
+    <%= v.text_field :location %>
+    <%= v.number_field :crowd_capacity %>
+    <%= check_box("venue", "parking", {}, "yes", "no") %>
+    <% end %>
+    <p><%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p>
+    <br><br>
+    <% end %>
+    <%= f.submit %>
+<% end %>
