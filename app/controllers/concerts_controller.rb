@@ -30,6 +30,22 @@ class ConcertsController < ApplicationController
         @venue_id = params[:venue_id]
     end
 
+    def update
+        @concert = Concert.find(params[:id])
+        # byebug
+        if !params[:concert][:venue_id].empty? && params[:concert][:venue_attributes]
+            # byebug
+            render :edit
+        else
+            @concert.update(concert_params)
+            if @concert.save
+                redirect_to concert_path(@concert)
+            else
+                render :edit
+            end
+        end
+    end
+
     private
 
     def concert_params
