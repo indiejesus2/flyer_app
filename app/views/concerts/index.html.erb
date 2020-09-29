@@ -1,8 +1,10 @@
 <h1>Concerts</h1>
 <% @concerts.each do |concert| %>
 <ul>
-<h3><%= concert.date %></h3>
+<h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.name %></p>
 <p>Admission $<%= concert.admission %></p>
 </ul>
 <% end %>
+
+<%= link_to 'New Show', new_concert_path %>

@@ -8,14 +8,14 @@
     <%= f.hidden_field :venue_id, value: @venue_id %>
     <% else %>
     <h3>New Venue</h3>
-    <%= f.fields_for :venue, Venue.new do |v| %>
-    Name: <%= v.text_field :name %>
-    Location: <%= v.text_field :location %>
-    Crowd Capacity: <%= v.number_field :crowd_capacity %>
-    Parking? Yes<%= check_box("venue", "parking", {}, "yes", "no") %>
+    <%= f.fields_for :venue, Venue.new do |venue| %>
+        Name: <%= venue.text_field :name %>
+        Location: <%= venue.text_field :location %>
+        Crowd Capacity: <%= venue.number_field :crowd_capacity %>
+        Parking?: Yes <%= check_box("venue", "parking", {}, "yes", "no") %>
     <% end %>
     <p>Venues <%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p>
     <br><br>
-    <% end %>
+    <% end %>    
     <%= f.submit %>
 <% end %>
