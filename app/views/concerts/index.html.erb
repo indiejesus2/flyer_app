@@ -1,8 +1,6 @@
-
-<% if params[:band_id] %>
-<% @band = Band.find_by_id(params[:band_id]) %>
-<h1><%= @band.name %> Concerts</h1>
-<% @band.concerts.each do |concert| %>
+<% if current_user %>
+<h1><%= current_user.band.name %> Concerts</h1>
+<% current_user.band.concerts.each do |concert| %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.name %></p>

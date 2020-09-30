@@ -1,15 +1,16 @@
+<% byebug %>
 <%= form_for concert do |f| %>
     Date: <%= f.date_field :date %>
     Admission: <%= f.number_field :admission %>
     <br>
-    <% if venue_id && concert.id %>
+    <% if venue_id || concert.id %>
     <%= f.hidden_field :venue_id, value: venue_id %>
     <% else %>
     <p>Venues <%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p><br>
     <h3>New Venue</h3>
     <%= f.fields_for :venue, Venue.new do |venue| %>
         Name: <%= venue.text_field :name %>
-        Location: <%= venue.text_field :location %>
+        Location: <%= venue.text_field :city %> <%= venue.text_field :state %>
         Crowd Capacity: <%= venue.number_field :crowd_capacity %>
         Parking?: Yes <%= check_box("venue", "parking", {}, "yes", "no") %>
     <% end %>

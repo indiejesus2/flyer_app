@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :sessions
   get '/signup' => 'users#new'
+  get '/login' => 'sessions#new'
+  delete '/logout', to: 'sessions#destroy'
   
   resources :users 
   resources :concerts

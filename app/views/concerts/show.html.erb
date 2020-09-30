@@ -1,4 +1,7 @@
 <h1><%= @concert.venue.name %></h1>
-<p><%= @concert.venue.location %></p>
+<p><%= @concert.venue.city %></p>
 <h3><%= @concert.date %></h3>
 <p><%= @concert.admission %></p>
+
+<%= link_to 'Delete Concert', "concerts#destroy" %>
+<%= link_to 'Concerts', concerts_path %>
