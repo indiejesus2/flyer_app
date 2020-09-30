@@ -20,5 +20,11 @@ class BandsController < ApplicationController
     def edit
         @band = Band.find(params[:id])
     end
-    
+
+    private
+
+    def band_params
+        params.require(:band).permit(:name, :genre)
+    end
+
 end
