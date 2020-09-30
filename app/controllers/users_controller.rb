@@ -7,6 +7,11 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         @user.band = Band.find_or_create_by(name: params[:user][:band])
+        if @user.save
+            redirect_to edit_band_path(@user.band)
+        else
+            render '/signup'
+        end
     end
 
     private
