@@ -21,6 +21,16 @@ class BandsController < ApplicationController
         @band = Band.find(params[:id])
     end
 
+    def update
+        @band = Band.find(params[:id])
+        @band.update(band_params)
+    end
+
+    def destroy
+        @band = Band.find(params[:id])
+        @band.destroy
+    end
+
     private
 
     def band_params
