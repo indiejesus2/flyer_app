@@ -32,9 +32,7 @@ class ConcertsController < ApplicationController
 
     def update
         @concert = Concert.find(params[:id])
-        # byebug
         if !params[:concert][:venue_id].empty? && params[:concert][:venue_attributes]
-            # byebug
             render :edit
         else
             @concert.update(concert_params)

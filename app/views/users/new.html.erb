@@ -1,0 +1,9 @@
+<h1>Signup!</h1>
+
+<%= form_for @user do |f| %>
+    <%= f.text_field :username %>
+    <%= f.password_field :password %>
+    <%= f.email_field :email %>
+    <%= f.text_field :band %>
+    <%= f.submit %>
+<% end %>
