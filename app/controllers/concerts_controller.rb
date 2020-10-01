@@ -6,8 +6,12 @@ class ConcertsController < ApplicationController
     end
 
     def new
-        @concert = Concert.new
-        @venue_id = params[:venue_id]
+        if logged_in?
+            @concert = Concert.new
+            @venue_id = params[:venue_id]
+        else
+            redirect_to concerts_path
+        end
     end
 
     def create

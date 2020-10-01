@@ -1,5 +1,9 @@
 class BandsController < ApplicationController
 
+    def index
+        @bands = Band.all
+    end
+
     def new
         @band = Band.new
     end
@@ -19,11 +23,20 @@ class BandsController < ApplicationController
 
     def edit
         @band = Band.find(params[:id])
+        if current_user.band != @band
+             redirect_to band_path(@band)
+        end
     end
 
     def update
+        
         @band = Band.find(params[:id])
-        @band.update(band_params)
+        if current_user.band = @band
+            @band.update(band_params)
+            redirect_to band_concerts_path(@band)
+        else
+            render band_path(@band)
+        end
     end
 
     def destroy
