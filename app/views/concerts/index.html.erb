@@ -18,4 +18,6 @@
 </ul>
 <% end %>
 <% end %>
+<% if logged_in? %>
 <%= link_to 'New Show', new_concert_path %>
+<% end %>

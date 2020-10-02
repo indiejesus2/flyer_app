@@ -55,7 +55,7 @@ class ConcertsController < ApplicationController
     end
 
     def set_band
-        @band = Band.first
+        @band = current_user.band if current_user
     end
 
 end

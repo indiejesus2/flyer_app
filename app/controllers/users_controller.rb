@@ -9,7 +9,6 @@ class UsersController < ApplicationController
         @user.band = Band.find_or_create_by(name: params[:user][:band])
         if @user.save
             session[:user_id] = @user.id
-            # sessions[:band] = @user.band.name
             redirect_to edit_band_path(@user.band)
         else
             render '/signup'

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   
-  resources :sessions
   get '/signup' => 'users#new'
-  get '/login' => 'sessions#new'
-  delete '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
   
   resources :users 
   resources :concerts
