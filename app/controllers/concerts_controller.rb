@@ -2,7 +2,17 @@ class ConcertsController < ApplicationController
     before_action :set_band, only: [:new, :create]
 
     def index
-        @concerts = Concert.all
+        @bands = Band.all
+        @venues = Venue.all
+        if !params[:band].blank?
+            @concerts = Concert.by_band(params[:band])
+        elsif !params[:venue].blank?
+            @concerts = Concert.by_venue(params[:venue])
+        elsif !params[:date].blank?
+            @concerts = Concert.by_date(params[:date])
+        else
+            @concerts = Concert.all
+        end
     end
 
     def new
@@ -46,6 +56,12 @@ class ConcertsController < ApplicationController
                 render :edit
             end
         end
+    end
+
+    def destroy
+        @concert = Concert.find(params[:id])
+        @concert.destroy
+        redirect_to band_concerts_path(@band)
     end
 
     private

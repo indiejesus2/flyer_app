@@ -13,10 +13,12 @@
     <%= yield %>
   </body>
 </html>
-
+<br><br>
+<div class="footer">
 <% if !!current_user %>
 <%= link_to 'Logout', '/logout', method: 'delete' %>
 <% else %>
 <%= link_to 'Signup', '/signup' %>
 <%= link_to 'Login', '/login' %>
 <% end %>
+</div>

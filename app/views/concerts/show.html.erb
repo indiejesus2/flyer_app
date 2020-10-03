@@ -3,5 +3,5 @@
 <h3><%= @concert.date %></h3>
 <p><%= @concert.admission %></p>
 
-<%= link_to 'Delete Concert', "concerts#destroy" %>
+<%= link_to 'Delete Concert', concert_path(@concert), method: :delete %>
 <%= link_to 'Concerts', concerts_path %>
