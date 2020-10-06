@@ -11,7 +11,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect_to edit_band_path(@user.band)
         else
-            render '/signup'
+            redirect_to '/signup'
         end
     end
 

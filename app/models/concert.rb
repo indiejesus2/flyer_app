@@ -1,7 +1,7 @@
 class Concert < ApplicationRecord
   belongs_to :band
   belongs_to :venue
-  validates :date, presence: :true
+  validates :date, :venue_id, :band_id, presence: :true
   accepts_nested_attributes_for :venue, reject_if: :all_blank
 
   def self.by_band(band)
