@@ -9,7 +9,17 @@
 </ul>
 <% end %>
 <% else %>
-<h1>Concerts</h1>
+<center><h1>Concerts</h1></center>
+
+<% @concerts.each do |concert| %>
+<b><%= concert.band.name %></b>
+<ul>
+<h3><%= link_to concert.date, concert_path(concert) %></h3>
+<p><%= concert.venue.name %> - <%= concert.venue.location %> </p>
+<p>Admission $<%= concert.admission %></p>
+</ul>
+<% end %>
+<% end %>
 <div>
     <h3>Search Concerts:</h3>
     <%= form_tag("/concerts", method: "get") do %>
@@ -19,15 +29,6 @@
         <%= submit_tag "Find Concerts" %>
     <% end %>
 </div>
-<% @concerts.each do |concert| %>
-
-<ul>
-<h3><%= link_to concert.date, concert_path(concert) %></h3>
-<p><%= concert.venue.name %> - <%= concert.venue.location %> </p>
-<p>Admission $<%= concert.admission %></p>
-</ul>
-<% end %>
-<% end %>
 <% if logged_in? %>
 <%= link_to 'New Show', new_concert_path %>
 <% end %>

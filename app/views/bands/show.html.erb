@@ -1,3 +1,4 @@
 <h1><%= @band.name %></h1>
 <p><%= @band.city %> - <%= @band.state %>
 <p><%= @band.genre %></p>
+<%= link_to 'Concerts', band_concerts_path(@band) %>
