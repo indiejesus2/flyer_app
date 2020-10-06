@@ -10,10 +10,20 @@
 <% end %>
 <% else %>
 <h1>Concerts</h1>
+<div>
+    <h3>Search Concerts:</h3>
+    <%= form_tag("/concerts", method: "get") do %>
+        <%= search_field_tag "band", "Band" %>
+        <%= select_tag "venue", options_from_collection_for_select(@venues, "id", "search"), include_blank: "Venues" %>
+        <%= date_field_tag "date" %>
+        <%= submit_tag "Find Concerts" %>
+    <% end %>
+</div>
 <% @concerts.each do |concert| %>
+
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
-<p><%= concert.venue.name %></p>
+<p><%= concert.venue.name %> - <%= concert.venue.location %> </p>
 <p>Admission $<%= concert.admission %></p>
 </ul>
 <% end %>
