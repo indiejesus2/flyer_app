@@ -1,5 +1,6 @@
 class ConcertsController < ApplicationController
-    before_action :set_band, only: [:new, :create]
+    before_action :set_band, only: [:new, :create, :update]
+    before_action :logged_in, only: [:new, :create, :update]
 
     def index
         @bands = Band.all
@@ -20,14 +21,9 @@ class ConcertsController < ApplicationController
     end
 
     def new
-        if logged_in?
-            @concert = Concert.new
-            @venue_id = params[:venue_id]
-            @venue = Venue.new
-        else
-            flash[:error] = "You must be logged in to perform that action."
-            redirect_to concerts_path
-        end
+        @concert = Concert.new
+        @venue_id = params[:venue_id]
+        @venue = Venue.new
     end
 
     def create
@@ -80,6 +76,13 @@ class ConcertsController < ApplicationController
 
     def set_band
         @band = current_user.band if current_user
+    end
+
+    def logged_in
+        if !logged_in?
+            flash[:error] = "You must be logged in to perform that action."
+            redirect_to concerts_path
+        end
     end
 
 end
