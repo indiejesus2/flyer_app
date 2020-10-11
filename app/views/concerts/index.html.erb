@@ -3,7 +3,7 @@
 
 <% @bands.each do |band| %>
 <% if !band.concerts.empty? %>
-<%= band.name %>
+<%= link_to band.name, band_path(band) %>
 <% band.concerts.each do |concert| %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>

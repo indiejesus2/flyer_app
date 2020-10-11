@@ -27,8 +27,8 @@ class ConcertsController < ApplicationController
     end
 
     def create
-        @concert = Concert.new(concert_params)
-        @concert.band = @band
+        @concert = @band.concerts.new(concert_params)
+        @concert.venue = Venue.create(concert_params[:venue_attributes])
         if @concert.save
             redirect_to concert_path(@concert)
         else
@@ -71,7 +71,7 @@ class ConcertsController < ApplicationController
     private
 
     def concert_params
-        params.require(:concert).permit(:date, :admission, :venue_id, venue_attributes: [:name, :location, :crowd_capacity, :parking])
+        params.require(:concert).permit(:date, :admission, :venue_id, venue_attributes: [:name, :city, :state, :crowd_capacity, :parking])
     end
 
     def set_band
