@@ -1,12 +1,8 @@
 <h1><%= venue.name %></h1>
 
-<p><%= venue.city %></p>
-<p><%= venue.state %></p>
-<p><%= venue.crowd_capacity %></p>
-<% if venue.parking == true %>
-<p>On-site Parking</p>
-<% else %>
-<p>No Parking</p>
-<% end %>
+<p><%= venue.location %></p>
+<p>Crowd Capacity: <%= venue.crowd_capacity %></p>
+<p><%= street_parking? venue %></p>
+
 
 <%= link_to 'New Show', new_venue_concert_path(venue) %>

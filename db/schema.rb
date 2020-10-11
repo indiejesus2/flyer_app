@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_09_30_171724) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
-    t.integer "band_id", null: false
+    t.integer "band_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["band_id"], name: "index_users_on_band_id"

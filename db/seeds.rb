@@ -1,3 +1,6 @@
+# User.create(username: "luckedout", password: "password")
+# User.create(username: "test", password: "test")
+
 Venue.create(name: "Prince of Peace", city: "Howell", state: "New Jersey", crowd_capacity: 250, parking: false)
 Venue.create(name: "Starland Ballroom", city: "Sayreville", state: "New Jersey", crowd_capacity: 2500, parking: true)
 

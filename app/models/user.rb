@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :band
   has_secure_password
+  belongs_to :band
   validates :username, :email, uniqueness: :true
 end

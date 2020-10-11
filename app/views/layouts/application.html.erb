@@ -14,6 +14,9 @@
     <%= link_to 'Concerts', concerts_path %>
     <%= link_to 'Bands', bands_path %>
     <%= link_to 'Venues', venues_path %>
+    <% if flash[:error] %>
+    <br><%= flash[:error].to_s %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -5,11 +5,15 @@ class ConcertsController < ApplicationController
         @bands = Band.all
         @venues = Venue.all
         if !params[:band].blank?
-            @concerts = Concert.by_band(params[:band])
+            @band = Band.find_by(name: params[:band])
+            # @concerts = @band.concerts
         elsif !params[:venue].blank?
             @concerts = Concert.by_venue(params[:venue])
         elsif !params[:date].blank?
             @concerts = Concert.by_date(params[:date])
+        elsif params[:band_id]
+            band = Band.find_by_id(params[:band_id])
+            @concerts = band.concerts
         else
             @concerts = Concert.all
         end
@@ -19,7 +23,9 @@ class ConcertsController < ApplicationController
         if logged_in?
             @concert = Concert.new
             @venue_id = params[:venue_id]
+            @venue = Venue.new
         else
+            flash[:error] = "You must be logged in to perform that action."
             redirect_to concerts_path
         end
     end
@@ -30,6 +36,7 @@ class ConcertsController < ApplicationController
         if @concert.save
             redirect_to concert_path(@concert)
         else
+            flash[:error] = @concert.errors.full_messages
             render :new
         end
 
@@ -53,6 +60,7 @@ class ConcertsController < ApplicationController
             if @concert.save
                 redirect_to concert_path(@concert)
             else
+                flash[:error] = @concert.errors.full_messages
                 render :edit
             end
         end

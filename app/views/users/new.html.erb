@@ -4,6 +4,6 @@
     <%= f.text_field :username %>
     <%= f.password_field :password %>
     <%= f.email_field :email %>
-    <%= f.text_field :band %>
+    <%= f.text_field :band, value: @user.band.name %>
     <%= f.submit %>
 <% end %>

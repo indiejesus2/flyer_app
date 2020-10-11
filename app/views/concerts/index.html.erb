@@ -1,18 +1,10 @@
-<% if params[:band_id] %>
-<% band = Band.find_by_id(params[:band_id]) %>
-<h1><%= band.name %> Concerts</h1>
-<% band.concerts.each do |concert| %>
-<ul>
-<h3><%= link_to concert.date, concert_path(concert) %></h3>
-<p><%= concert.venue.name %></p>
-<p>Admission $<%= concert.admission %></p>
-</ul>
-<% end %>
-<% else %>
-<center><h1>Concerts</h1></center>
 
-<% @concerts.each do |concert| %>
-<b><%= concert.band.name %></b>
+<center><h1><%= band? %></h1></center>
+
+<% @bands.each do |band| %>
+<% if !band.concerts.empty? %>
+<%= band.name %>
+<% band.concerts.each do |concert| %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.name %> - <%= concert.venue.location %> </p>
@@ -20,15 +12,10 @@
 </ul>
 <% end %>
 <% end %>
-<div>
-    <h3>Search Concerts:</h3>
-    <%= form_tag("/concerts", method: "get") do %>
-        <%= search_field_tag "band", "Band" %>
-        <%= select_tag "venue", options_from_collection_for_select(@venues, "id", "search"), include_blank: "Venues" %>
-        <%= date_field_tag "date" %>
-        <%= submit_tag "Find Concerts" %>
-    <% end %>
-</div>
+<% end %>
+
+<%= render partial: 'search' %>
+
 <% if logged_in? %>
 <%= link_to 'New Show', new_concert_path %>
 <% end %>
