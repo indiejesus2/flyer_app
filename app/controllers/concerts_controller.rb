@@ -1,17 +1,10 @@
 class ConcertsController < ApplicationController
-    before_action :set_band, only: [:new, :create, :update]
+    before_action :set_band, only: [:index, :new, :create, :update]
     before_action :logged_in, only: [:new, :create, :update]
 
     def index
-        @bands = Band.all
-        @venues = Venue.all
-        if !params[:band].blank?
-            @band = Band.find_by(name: params[:band])
-            # @concerts = @band.concerts
-        elsif !params[:venue].blank?
-            @concerts = Concert.by_venue(params[:venue])
-        elsif !params[:date].blank?
-            @concerts = Concert.by_date(params[:date])
+        if !search_params.blank?
+            @concerts = Concert.search(search_params)
         elsif params[:band_id]
             band = Band.find_by_id(params[:band_id])
             @concerts = band.concerts
@@ -23,7 +16,6 @@ class ConcertsController < ApplicationController
     def new
         @concert = Concert.new
         @venue_id = params[:venue_id]
-        @venue = Venue.new
     end
 
     def create
@@ -76,6 +68,10 @@ class ConcertsController < ApplicationController
 
     def set_band
         @band = current_user.band if current_user
+    end
+
+    def search_params
+        params.permit(:band, :venue, :date)
     end
 
     def logged_in

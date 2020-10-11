@@ -11,3 +11,7 @@
 <% else %>
 
 <%= render partial: 'venues/form', locals: {venue: @venue} %>
+
+<% @bands.each do |band| %>
+<% if !band.concerts.empty? %>
+<%= link_to band.name, band_path(band) %>

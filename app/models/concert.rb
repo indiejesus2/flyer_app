@@ -1,20 +1,19 @@
 class Concert < ApplicationRecord
   belongs_to :band
   belongs_to :venue
-  validates :date, :venue_id, :band_id, presence: :true
+  validates :date, presence: :true
+  validates_associated :band, :venue
   accepts_nested_attributes_for :venue, reject_if: :all_blank
 
-  def self.by_band(band)
-    band = Band.find_by(name: band)
-    where(band: band.id)
+  def self.search(params)
+    data = {}
+    params.each do |key, value| 
+      data.store(key, value) if !value.empty?
+    end
+    where(concerts: data)
   end
 
-  def self.by_venue(venue_id)
-    where(venue: venue_id)
-  end
-
-  def self.by_date(date)
-    where(concerts: {date: date})
+  def past_show
   end
 
 end
