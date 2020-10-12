@@ -13,8 +13,12 @@ class Concert < ApplicationRecord
     where(concerts: data)
   end
 
-  def past_show
-    where(concerts: {date: date.past})
+  def self.past_show
+    Concert.where('date < ?', DateTime.now)
+  end
+
+  def self.current_show
+    Concert.where('date >= ?', DateTime.now)
   end
 
 end

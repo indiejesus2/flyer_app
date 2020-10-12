@@ -9,7 +9,7 @@ class ConcertsController < ApplicationController
             band = Band.find_by_id(params[:band_id])
             @concerts = band.concerts.order(:date)
         else
-            @concerts = Concert.all.order(:date)
+            @concerts = Concert.all.current_show
         end
     end
 
