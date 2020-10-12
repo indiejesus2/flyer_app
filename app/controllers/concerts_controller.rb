@@ -1,5 +1,6 @@
 class ConcertsController < ApplicationController
     before_action :set_band, only: [:index, :new, :create, :update]
+    before_action :set_concert, only: [:show, :edit, :update, :destroy]
     before_action :logged_in, only: [:new, :create, :update]
 
     def index
@@ -31,16 +32,13 @@ class ConcertsController < ApplicationController
     end
 
     def show
-        @concert = Concert.find(params[:id])
     end
 
     def edit
-        @concert = Concert.find(params[:id])
         @venue_id = params[:venue_id]
     end
 
     def update
-        @concert = Concert.find(params[:id])
         @concert.update(concert_params)
         if @concert.save
             redirect_to concert_path(@concert)
@@ -51,7 +49,6 @@ class ConcertsController < ApplicationController
     end
 
     def destroy
-        @concert = Concert.find(params[:id])
         @concert.destroy
         redirect_to band_concerts_path(@band)
     end
@@ -64,6 +61,10 @@ class ConcertsController < ApplicationController
 
     def set_band
         @band = current_user.band if current_user
+    end
+
+    def set_concert
+        @concert = Concert.find(params[:id])
     end
 
     def search_params
