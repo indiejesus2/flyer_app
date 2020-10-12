@@ -2,6 +2,7 @@ class Concert < ApplicationRecord
   belongs_to :band
   belongs_to :venue
   validates :date, presence: :true
+  validates_numericality_of :admission, greater_than_or_equal_to: 0
   validates_associated :band, :venue
   accepts_nested_attributes_for :venue, reject_if: :all_blank
 

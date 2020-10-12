@@ -21,7 +21,6 @@ class ConcertsController < ApplicationController
 
     def create
         @concert = @band.concerts.new(concert_params)
-        @concert.venue = Venue.create(concert_params[:venue_attributes])
         if @concert.save
             redirect_to concert_path(@concert)
         else
@@ -42,17 +41,12 @@ class ConcertsController < ApplicationController
 
     def update
         @concert = Concert.find(params[:id])
-        if params[:concert][:venue_id].empty? && params[:concert][:venue_attributes]
+        @concert.update(concert_params)
+        if @concert.save
+            redirect_to concert_path(@concert)
+        else
             flash[:error] = @concert.errors.full_messages
             render :edit
-        else
-            @concert.update(concert_params)
-            if @concert.save
-                redirect_to concert_path(@concert)
-            else
-                flash[:error] = @concert.errors.full_messages
-                render :edit
-            end
         end
     end
 
