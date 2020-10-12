@@ -30,7 +30,7 @@ class VenuesController < ApplicationController
     private
 
     def venue_params
-        params.require(:venue).permit(:name, :location, :crowd_capacity, :parking)
+        params.require(:venue).permit(:name, :city, :state, :crowd_capacity, :parking)
     end
 
 end

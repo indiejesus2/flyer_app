@@ -8,7 +8,7 @@
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.search %> </p>
-<p>Admission $<%= concert.admission %></p>
+<p>Admission: <%= free?(concert) %></p>
 </ul>
 <% end %>
 

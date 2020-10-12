@@ -9,4 +9,12 @@ module ConcertsHelper
         band.name if band
     end
             
+    def free?(concert)
+        if concert.admission == 0 || concert.admission.nil?
+            "Free"
+        else
+            "$#{concert.admission}"
+        end
+    end
+
 end

@@ -1,7 +1,10 @@
-<h1><%= @concert.venue.name %></h1>
-<p><%= @concert.venue.city %></p>
+<center><h1><%= @concert.band.name %> Concert</h1></center>
+<h2><%= @concert.venue.name %></h2>
+<p><%= @concert.venue.location %></p>
 <h3><%= @concert.date %></h3>
-<p><%= @concert.admission %></p>
+<p>Admission: <%= free?(@concert) %></p>
 
+<% if current_user.band == @concert.band %>
 <%= link_to 'Delete Concert', concert_path(@concert), method: :delete %>
-<%= link_to 'Concerts', concerts_path %>
+<% end %>
+<%= link_to 'Concerts', band_concerts_path(@concert.band) %>
