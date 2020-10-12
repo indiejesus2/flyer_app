@@ -1,9 +1,10 @@
 
 <center><h1><%= band? %> Concerts</h1></center>
 
-
 <% @concerts.each do |concert| %>
+<% if !band? %>
 <%= link_to concert.band.name, band_path(concert.band) %>
+<% end %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.search %> </p>

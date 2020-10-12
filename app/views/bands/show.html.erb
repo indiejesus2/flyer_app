@@ -1,5 +1,5 @@
 <h1><%= @band.name %></h1>
-<p>Hometown - <%= @band.location %>
+<p>Hometown - <%= location %>
 <p><%= @band.genre %></p>
 <%= link_to 'Concerts', band_concerts_path(@band) %>
 <% if @band == current_user.band %>
