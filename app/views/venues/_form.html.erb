@@ -2,6 +2,6 @@
     Name: <%= f.text_field :name %> <br>
     Location: <%= f.text_field :city %> City <%= f.text_field :state %> State <br>
     Crowd Capacity: <%= f.number_field :crowd_capacity %> <br>
-    Parking?: Yes <%= check_box("venue", "parking", {}, "yes") %> No <%= check_box("venue", "parking", {}, "no") %> <br>
+    Parking?: Yes <%= check_box("venue", "parking", {}, "yes") %> <br>
     <%= f.submit %>
 <% end %>

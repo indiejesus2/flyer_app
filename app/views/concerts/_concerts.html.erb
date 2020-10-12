@@ -1,6 +1,6 @@
 <% if params[:band_id] %>
 <% band = Band.find_by_id(params[:band_id]) %>
-<h1><%= band.name %> Concerts</h1>
+<h1><%= band? %> Concerts</h1>
 <% band.concerts.each do |concert| %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
@@ -15,3 +15,7 @@
 <% @bands.each do |band| %>
 <% if !band.concerts.empty? %>
 <%= link_to band.name, band_path(band) %>
+
+ <% if band != concert.band %>
+    <% band = concert.band %>
+<%= link_to band.name, band_path(band) %>   

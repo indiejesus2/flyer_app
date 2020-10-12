@@ -14,6 +14,7 @@ class Concert < ApplicationRecord
   end
 
   def past_show
+    where(concerts: date)
   end
 
 end
