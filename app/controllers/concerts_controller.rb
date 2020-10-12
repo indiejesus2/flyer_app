@@ -41,7 +41,8 @@ class ConcertsController < ApplicationController
 
     def update
         @concert = Concert.find(params[:id])
-        if !params[:concert][:venue_id].empty? && params[:concert][:venue_attributes]
+        if params[:concert][:venue_id].empty? && params[:concert][:venue_attributes]
+            flash[:error] = @concert.errors.full_messages
             render :edit
         else
             @concert.update(concert_params)

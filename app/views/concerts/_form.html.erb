@@ -2,7 +2,7 @@
     Date: <%= f.date_field :date %>
     Admission: <%= f.number_field :admission %>
     <br>
-    <% if venue_id || concert.id %>
+    <% if venue_id %>
     <%= f.hidden_field :venue_id, value: venue_id %>
     <% else %>
     <p>Venues <%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p><br>

@@ -5,6 +5,7 @@
 <p>Admission: <%= free?(@concert) %></p>
 
 <% if current_user.band == @concert.band %>
+<%= link_to 'Edit Concert', edit_concert_path(@concert) %>
 <%= link_to 'Delete Concert', concert_path(@concert), method: :delete %>
 <% end %>
 <%= link_to 'Concerts', band_concerts_path(@concert.band) %>
