@@ -1,15 +1,11 @@
 
 <center><h1><%= band? %> Concerts</h1></center>
 
-<% @concerts.each do |concert| %>
-<% if !band? %>
-<%= link_to concert.band.name, band_path(concert.band) %>
-<% end %>
-<ul>
-<h3><%= link_to concert.date, concert_path(concert) %></h3>
-<p><%= concert.venue.search %> </p>
-<p>Admission: <%= free?(concert) %></p>
-</ul>
+<%= render partial: 'concerts', locals: {concerts: @concerts} %>
+
+<% if @past %>
+<center><h3>Past Shows</h3></center>
+<%= render partial: 'concerts', locals: {concerts: @past} %>
 <% end %>
 
 <%= render partial: 'search' %>

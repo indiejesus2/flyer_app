@@ -18,7 +18,7 @@ class Concert < ApplicationRecord
   end
 
   def self.current_show
-    Concert.where('date >= ?', DateTime.now)
+    Concert.where('date >= ?', DateTime.now).order(:date)
   end
 
 end

@@ -1,21 +1,10 @@
-<% if params[:band_id] %>
-<% band = Band.find_by_id(params[:band_id]) %>
-<h1><%= band? %> Concerts</h1>
-<% band.concerts.each do |concert| %>
+<% concerts.each do |concert| %>
+<% if !band? %>
+<%= link_to concert.band.name, band_path(concert.band) %>
+<% end %>
 <ul>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
-<p><%= concert.venue.name %></p>
-<p>Admission $<%= concert.admission %></p>
+<p><%= concert.venue.search %> </p>
+<p>Admission: <%= free?(concert) %></p>
 </ul>
 <% end %>
-<% else %>
-
-<%= render partial: 'venues/form', locals: {venue: @venue} %>
-
-<% @bands.each do |band| %>
-<% if !band.concerts.empty? %>
-<%= link_to band.name, band_path(band) %>
-
- <% if band != concert.band %>
-    <% band = concert.band %>
-<%= link_to band.name, band_path(band) %>   

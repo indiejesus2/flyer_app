@@ -4,10 +4,11 @@ class ConcertsController < ApplicationController
 
     def index
         if !search_params.blank?
-            @concerts = Concert.search(search_params).order(:date)
+            @concerts = Concert.search(search_params).current_show
         elsif params[:band_id]
             band = Band.find_by_id(params[:band_id])
-            @concerts = band.concerts.order(:date)
+            @concerts = band.concerts.current_show
+            @past = band.concerts.past_show
         else
             @concerts = Concert.all.current_show
         end
