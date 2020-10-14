@@ -8,11 +8,8 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:user][:password])
             session[:user_id] = user.id
             redirect_to band_concerts_path(user.band)
-        elsif user.nil?
-            flash[:error] = "User Not Found"
-            render :new
         else
-            flash[:error] = "Invalid Password"
+            flash[:error] = "Invalid Username/Password. Please try again."
             render :new
         end
     end
