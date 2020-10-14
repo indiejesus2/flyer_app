@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             redirect_to band_concerts_path(user.band)
         elsif user.nil?
-            byebug
             flash[:error] = "User Not Found"
             render :new
         else

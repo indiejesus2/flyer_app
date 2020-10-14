@@ -1,5 +1,5 @@
 class ConcertsController < ApplicationController
-    before_action :set_band, only: [:index, :new, :create, :update]
+    before_action :set_band, only: [:new, :create, :update]
     before_action :set_concert, only: [:show, :edit, :update, :destroy]
     before_action :logged_in, only: [:new, :create, :update]
 
