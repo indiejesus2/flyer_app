@@ -1,7 +1,11 @@
 <div>
     <h3>Search Concerts:</h3>
     <%= form_tag("/concerts", method: "get") do %>
+        <% if !band? %>
         <%= select_tag "band", options_from_collection_for_select(Band.all, "id", "name"), include_blank: "Bands" %>
+        <% else %>
+        <%= hidden_field_tag "band", params[:band_id] || params[:band] %>
+        <% end %>
         <%= select_tag "venue", options_from_collection_for_select(Venue.all, "id", "search"), include_blank: "Venues" %>
         <%= date_field_tag "date" %>
         <%= submit_tag "Find Concerts" %>
