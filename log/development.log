@@ -41148,3 +41148,1382 @@ Processing by ConcertsController#index as HTML
 Completed 200 OK in 925ms (Views: 898.3ms | ActiveRecord: 19.6ms | Allocations: 27575)
 
 
+Started GET "/concerts" for ::1 at 2020-10-16 17:52:14 -0400
+  [1m[35m (32.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.662045') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.689025') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (2.2ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.873804') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.6ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.897285') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.904092') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.907305') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.945945') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.951308') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:15.955852') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.004786') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.009065') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.031403') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.035559') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.038640') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.059936') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:52:16.082621') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 674.1ms | Allocations: 41558)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.2ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 33.0ms | Allocations: 2283)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 767.7ms | Allocations: 44620)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1371ms (Views: 1167.4ms | ActiveRecord: 21.7ms | Allocations: 55319)
+
+
+Started GET "/bands/1" for ::1 at 2020-10-16 17:52:20 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 40.3ms | Allocations: 1836)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.8ms | Allocations: 3572)
+
+
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    2: <p>Hometown - <%= location %>
+    3: <p><%= @band.genre %></p>
+    4: <%= link_to 'Concerts', band_concerts_path(@band) %>
+    5: <% if @band == current_user.band %>
+    6: <%= link_to 'Edit Band', edit_band_path(@band) %>
+    7: <% end %>
+  
+app/views/bands/show.html.erb:5
+Started GET "/bands/1" for ::1 at 2020-10-16 17:53:23 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 81801.1ms | Allocations: 73902)
+Started GET "/concerts" for ::1 at 2020-10-16 17:54:45 -0400
+Completed 500 Internal Server Error in 81873ms (ActiveRecord: 0.4ms | Allocations: 77392)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 17:54:45 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    3: <p><%= @band.genre %></p>
+    4: <%= link_to 'Concerts', band_concerts_path(@band) %>
+    5: <% if @band == current_user.band %>
+    6: <%= link_to 'Edit Band', edit_band_path(@band) %>
+    7: <% end %>
+  
+app/views/bands/show.html.erb:6
+Processing by ConcertsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering concerts/index.html.erb within layouts/application
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.092008') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.095688') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.099719') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcert Load (0.9ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.101796') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.176880') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.183236') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.185385') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.211303') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.215392') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.241858') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.244348') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.248651') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.250814') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.274518') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.278785') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.280689') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.285262') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.309980') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.318495') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.365309') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.367528') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.391495') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.394111') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.398015') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.400155') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.420662') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.442667') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.448727') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.450721') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.475537') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.478058') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:54:46.481856') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  Rendered concerts/_concerts.html.erb (Duration: 448.9ms | Allocations: 85629)
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 451.5ms | Allocations: 86161)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 29.3ms | Allocations: 4045)
+  Rendered concerts/_search.html.erb (Duration: 8.7ms | Allocations: 3948)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 486.6ms | Allocations: 92250)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 482.0ms | Allocations: 90598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 829ms (Views: 817.0ms | ActiveRecord: 11.0ms | Allocations: 109299)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1103ms (Views: 1089.9ms | ActiveRecord: 10.4ms | Allocations: 299916)
+
+
+Started GET "/bands/1" for ::1 at 2020-10-16 17:54:51 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1520)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms | Allocations: 3266)
+
+
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    2: <p>Hometown - <%= location %>
+    3: <p><%= @band.genre %></p>
+    4: <%= link_to 'Concerts', band_concerts_path(@band) %>
+    5: <% if @band == current_user.band %>
+    6: <%= link_to 'Edit Band', edit_band_path(@band) %>
+    7: <% end %>
+  
+app/views/bands/show.html.erb:5
+Started GET "/bands/1" for ::1 at 2020-10-16 17:55:25 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 32.9ms | Allocations: 239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 91.0ms | ActiveRecord: 0.5ms | Allocations: 5930)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 17:55:28 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.6ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:55:28.387197') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:18
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:18
+  Rendered concerts/_concerts.html.erb (Duration: 42.5ms | Allocations: 3740)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 21:55:28.388400') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 21:55:28.388400')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:18
+  Rendered concerts/_concerts.html.erb (Duration: 32.8ms | Allocations: 2074)
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 29.2ms | Allocations: 2478)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 119.9ms | Allocations: 10174)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 234ms (Views: 221.1ms | ActiveRecord: 3.9ms | Allocations: 17051)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 17:56:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.695142') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.705701') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.747211') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.769213') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.797957') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.840875') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.846248') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.895990') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.924096') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:01.937112') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.008564') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.012437') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.015657') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.044090') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.047191') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:02.075843') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 444.2ms | Allocations: 38410)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 30.9ms | Allocations: 2238)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 480.4ms | Allocations: 41294)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 523ms (Views: 499.3ms | ActiveRecord: 18.7ms | Allocations: 47679)
+
+
+Started GET "/bands/1" for ::1 at 2020-10-16 17:56:03 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 0.5ms | Allocations: 5513)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 17:56:07 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:07.372931') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 32.0ms | Allocations: 2839)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 21:56:07.374216') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 21:56:07.374216')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 29.5ms | Allocations: 2050)
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 6.1ms | Allocations: 2121)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 74.6ms | Allocations: 8391)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 165ms (Views: 148.7ms | ActiveRecord: 4.0ms | Allocations: 13805)
+
+
+Started GET "/concerts?band=&venue=1&date=&commit=Find+Concerts" for ::1 at 2020-10-16 17:56:37 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band"=>"", "venue"=>"1", "date"=>"", "commit"=>"Find Concerts"}
+[31mUnpermitted parameter: :commit[0m
+[31mUnpermitted parameter: :commit[0m
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:7:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:7:in `band?'
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:37.933442') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (3.9ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:37.961425') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.073999') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.077306') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.106299') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.110528') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.116197') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.225476') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.314191') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.330690') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.358457') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.363464') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.394463') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.400488') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.427862') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 21:56:38.455659') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 532.5ms | Allocations: 19327)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 27.5ms | Allocations: 1988)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 564.2ms | Allocations: 22029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 622ms (Views: 601.7ms | ActiveRecord: 17.6ms | Allocations: 27095)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 17:57:07 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 29.0ms | Allocations: 3179)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 1.4ms | Allocations: 4400)
+
+
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    4: <h3><%= @concert.date %></h3>
+    5: <p>Admission: <%= free?(@concert) %></p>
+    6: 
+    7: <% if current_user.band == @concert.band %>
+    8: <%= link_to 'Edit Concert', edit_concert_path(@concert) %>
+    9: <%= link_to 'Delete Concert', concert_path(@concert), method: :delete %>
+   10: <% end %>
+  
+app/views/concerts/show.html.erb:7
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:00:04 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 53.7ms | Allocations: 1766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 138ms (Views: 130.8ms | ActiveRecord: 1.5ms | Allocations: 7276)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 18:00:13 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:00:13.053073') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 34.4ms | Allocations: 3175)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:00:13.054478') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:00:13.054478')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 7.8ms | Allocations: 2050)
+  [1m[36mBand Load (1.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 30.8ms | Allocations: 2350)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 105.5ms | Allocations: 9456)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 220ms (Views: 201.2ms | ActiveRecord: 4.5ms | Allocations: 14869)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:00:21 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (1.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 50.0ms | Allocations: 1547)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 122ms (Views: 113.6ms | ActiveRecord: 2.2ms | Allocations: 5919)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 18:00:23 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:00:23.338642') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 91.1ms | Allocations: 2835)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:00:23.341559') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.9ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:00:23.341559')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 32.1ms | Allocations: 2050)
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 28.6ms | Allocations: 2121)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 162.4ms | Allocations: 8386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 379ms (Views: 334.8ms | ActiveRecord: 5.3ms | Allocations: 17935)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:00:33 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.3ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (1.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 61.5ms | Allocations: 1545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 2.7ms | Allocations: 6073)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 18:01:28 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (3.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:01:28.145962') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 32.6ms | Allocations: 2833)
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:01:28.146628') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:01:28.146628')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 31.2ms | Allocations: 2050)
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 5.7ms | Allocations: 2121)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 114.9ms | Allocations: 8383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 199ms (Views: 143.9ms | ActiveRecord: 7.3ms | Allocations: 13463)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:04:19 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 8515.1ms | Allocations: 53863)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8651ms (Views: 8579.3ms | ActiveRecord: 6.3ms | Allocations: 65499)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:04:30 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:30.953751') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:30.982197') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.008127') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.049553') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.055834') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.101819') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.105045') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.134883') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.138322') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.174096') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.201905') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.204997') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.235138') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.238575') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.268142') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:04:31.271724') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 431.2ms | Allocations: 19902)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 36.4ms | Allocations: 2238)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 515.1ms | Allocations: 22781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 596ms (Views: 578.7ms | ActiveRecord: 11.9ms | Allocations: 27132)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:04:34 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.3ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 14302.9ms | Allocations: 40018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14399ms (Views: 14353.4ms | ActiveRecord: 1.3ms | Allocations: 44315)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:05:13 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 112466.9ms | Allocations: 116959)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113079ms (Views: 113069.3ms | ActiveRecord: 1.4ms | Allocations: 149523)
+
+
+Started GET "/concerts/3" for ::1 at 2020-10-16 18:07:12 -0400
+Processing by ConcertsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:66:in `set_concert'
+  Rendering concerts/show.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:1
+  [1m[36mVenue Load (3.9ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/show.html.erb:2
+  Rendered concerts/show.html.erb within layouts/application (Duration: 72.7ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 274ms (Views: 236.4ms | ActiveRecord: 5.1ms | Allocations: 8367)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:07:29 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_concerts.html.erb:2
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.014474') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.047300') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.126618') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.144780') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.197324') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.232023') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.238374') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.244477') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Load (0.6ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.281393') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:5
+  [1m[36mVenue Load (1.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mVenue Load (0.9ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:8
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.385631') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.391223') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.416452') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.436043') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.441159') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.464768') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:30.506177') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 519.0ms | Allocations: 19130)
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 34.8ms | Allocations: 2217)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 571.4ms | Allocations: 21988)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 627ms (Views: 611.2ms | ActiveRecord: 14.0ms | Allocations: 26048)
+
+
+Started GET "/bands/1" for ::1 at 2020-10-16 18:07:34 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 35.1ms | ActiveRecord: 0.4ms | Allocations: 5532)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 18:07:37 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:07:37.196118') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 37.7ms | Allocations: 2839)
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:07:37.196827') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (1.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:07:37.196827')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:15
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:17
+  Rendered concerts/_concerts.html.erb (Duration: 49.2ms | Allocations: 2050)
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 47.7ms | Allocations: 2121)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 165.4ms | Allocations: 8392)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 219ms (Views: 199.9ms | ActiveRecord: 4.5ms | Allocations: 13480)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:11:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 50.9ms | Allocations: 1193)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms | Allocations: 2476)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <center><h1><%= band? %> Concerts</h1></center>
+
+<% if !band? %>
+<% Band.all.each do |band| %>
+<% if !band.concerts.current_show.empty? %>
+<h2><%= link_to band.name, band_path(band) %></h2>
+<%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+<% else %>
+<%= render partial: 'concerts', locals: {concerts: @concerts} %>
+<% end %>
+    
+
+<% if @past && !@past.empty? %>
+<center><h3>Past Shows</h3></center>
+<%= render partial: 'concerts', locals: {concerts: @past} %>
+<% end %>
+
+<%= render partial: 'search' %>
+
+<% if logged_in? %>
+<%= link_to 'New Show', new_concert_path %>
+<% end %>
+
+):
+1:    <center><h1><%= band? %> Concerts</h1></center>
+2:    
+3:    <% if !band? %>
+4:    <% Band.all.each do |band| %>
+5:    <% if !band.concerts.current_show.empty? %>
+6:    <h2><%= link_to band.name, band_path(band) %></h2>
+7:    <%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+8:    <% else %>
+9:    <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+10:    <% end %>
+11:        
+12:    
+13:    <% if @past && !@past.empty? %>
+14:    <center><h3>Past Shows</h3></center>
+15:    <%= render partial: 'concerts', locals: {concerts: @past} %>
+16:    <% end %>
+17:    
+18:    <%= render partial: 'search' %>
+19:    
+20:    <% if logged_in? %>
+21:    <%= link_to 'New Show', new_concert_path %>
+22:    <% end %>
+  
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/concerts" for ::1 at 2020-10-16 18:13:06 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 41.7ms | Allocations: 1252)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 2448)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <center><h1><%= band? %> Concerts</h1></center>
+
+<% if !band? %>
+<% Band.all.each do |band| %>
+<% if !band.concerts.current_show.empty? %>
+<h2><%= link_to band.name, band_path(band) %></h2>
+<%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+<% end %>
+<% else %>
+<%= render partial: 'concerts', locals: {concerts: @concerts} %>
+<% end %>
+    
+
+<% if @past && !@past.empty? %>
+<center><h3>Past Shows</h3></center>
+<%= render partial: 'concerts', locals: {concerts: @past} %>
+<% end %>
+
+<%= render partial: 'search' %>
+
+<% if logged_in? %>
+<%= link_to 'New Show', new_concert_path %>
+<% end %>
+
+):
+1:    <center><h1><%= band? %> Concerts</h1></center>
+2:    
+3:    <% if !band? %>
+4:    <% Band.all.each do |band| %>
+5:    <% if !band.concerts.current_show.empty? %>
+6:    <h2><%= link_to band.name, band_path(band) %></h2>
+7:    <%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+8:    <% end %>
+9:    <% else %>
+10:    <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+11:    <% end %>
+12:        
+13:    
+14:    <% if @past && !@past.empty? %>
+15:    <center><h3>Past Shows</h3></center>
+16:    <%= render partial: 'concerts', locals: {concerts: @past} %>
+17:    <% end %>
+18:    
+19:    <%= render partial: 'search' %>
+20:    
+21:    <% if logged_in? %>
+22:    <%= link_to 'New Show', new_concert_path %>
+23:    <% end %>
+  
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+Started GET "/concerts" for ::1 at 2020-10-16 18:13:37 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 54.1ms | Allocations: 1266)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms | Allocations: 2462)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <center><h1><%= band? %> Concerts</h1></center>
+
+<% if !band? %>
+    <% Band.all.each do |band| %>
+        <% if !band.concerts.current_show.empty? %>
+        <h2><%= link_to band.name, band_path(band) %></h2>
+            <%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+        <% end %>
+<% else %>
+    <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+<% end %>
+    
+
+<% if @past && !@past.empty? %>
+<center><h3>Past Shows</h3></center>
+<%= render partial: 'concerts', locals: {concerts: @past} %>
+<% end %>
+
+<%= render partial: 'search' %>
+
+<% if logged_in? %>
+<%= link_to 'New Show', new_concert_path %>
+<% end %>
+
+):
+1:    <center><h1><%= band? %> Concerts</h1></center>
+2:    
+3:    <% if !band? %>
+4:        <% Band.all.each do |band| %>
+5:            <% if !band.concerts.current_show.empty? %>
+6:            <h2><%= link_to band.name, band_path(band) %></h2>
+7:                <%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
+8:            <% end %>
+9:    <% else %>
+10:        <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+11:    <% end %>
+12:        
+13:    
+14:    <% if @past && !@past.empty? %>
+15:    <center><h3>Past Shows</h3></center>
+16:    <%= render partial: 'concerts', locals: {concerts: @past} %>
+17:    <% end %>
+18:    
+19:    <%= render partial: 'search' %>
+20:    
+21:    <% if logged_in? %>
+22:    <%= link_to 'New Show', new_concert_path %>
+23:    <% end %>
+  
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+app/views/concerts/index.html.erb:9: else without rescue is useless
+app/views/concerts/index.html.erb:25: syntax error, unexpected end-of-input, expecting end
+Started GET "/concerts" for ::1 at 2020-10-16 18:16:33 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/index.html.erb:4
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.037500') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (1.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.062966') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 87.2ms | Allocations: 14373)
+  [1m[36mConcert Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.165116') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.185255') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 48.2ms | Allocations: 1445)
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.251171') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.279278') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.287022') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.308323') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.312774') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 33.9ms | Allocations: 2324)
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.349364') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.374111') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.379314') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.392707') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.418091') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.442469') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:16:34.447537') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 53.0ms | Allocations: 2238)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 583.3ms | Allocations: 43789)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 642ms (Views: 617.6ms | ActiveRecord: 22.1ms | Allocations: 49273)
+
+
+Started GET "/bands" for ::1 at 2020-10-16 18:18:30 -0400
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:2
+  Rendered bands/index.html.erb within layouts/application (Duration: 35.9ms | Allocations: 1254)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.4ms | Allocations: 7977)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:18:32 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/index.html.erb:4
+  [1m[36mConcert Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.143427') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.157664') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 20.4ms | Allocations: 2412)
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.180970') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.194929') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 16.6ms | Allocations: 1445)
+  [1m[36mConcert Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.213176') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.231813') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.246273') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.263314') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.280144') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 48.8ms | Allocations: 2324)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.332008') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.348627') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.363995') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.381798') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.396975') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.412954') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:32.431385') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 33.7ms | Allocations: 2217)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 376.0ms | Allocations: 21751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 499ms (Views: 483.7ms | ActiveRecord: 12.9ms | Allocations: 29480)
+
+
+Started GET "/venues" for ::1 at 2020-10-16 18:18:43 -0400
+Processing by VenuesController#index as HTML
+  Rendering venues/index.html.erb within layouts/application
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/venues/index.html.erb:5
+  Rendered venues/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 61.8ms | ActiveRecord: 0.4ms | Allocations: 5403)
+
+
+Started GET "/bands" for ::1 at 2020-10-16 18:18:44 -0400
+Processing by BandsController#index as HTML
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:2
+  Rendered bands/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1124)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.5ms | Allocations: 5076)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:18:46 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/index.html.erb:4
+  [1m[36mConcert Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.668703') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.682548') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 32.6ms | Allocations: 2270)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.716717') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.6ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.720510') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 26.8ms | Allocations: 1445)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.750568') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.766806') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.783368') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.800019') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.815912') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 37.7ms | Allocations: 2324)
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.866180') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.883703') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.900569') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.918104') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.937019') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.951858') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:46.968562') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 31.3ms | Allocations: 1988)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 352.4ms | Allocations: 20751)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 397ms (Views: 382.8ms | ActiveRecord: 12.5ms | Allocations: 25331)
+
+
+Started GET "/bands/1" for ::1 at 2020-10-16 18:18:54 -0400
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.5ms | Allocations: 4994)
+
+
+Started GET "/bands/1/concerts" for ::1 at 2020-10-16 18:18:55 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"1"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:18:55.755411') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 34.0ms | Allocations: 2275)
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:18:55.756109') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:15
+  [1m[36mConcert Load (0.6ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 22:18:55.756109')[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 19.8ms | Allocations: 1491)
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 19.4ms | Allocations: 2121)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 118.9ms | Allocations: 7803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 158.7ms | ActiveRecord: 4.8ms | Allocations: 13029)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 18:23:07 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/index.html.erb:4
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.619209') LIMIT ?[0m  [["band_id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.7ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.623803') ORDER BY "concerts"."date" ASC[0m  [["band_id", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 45.0ms | Allocations: 2414)
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.671128') LIMIT ?[0m  [["band_id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.675472') ORDER BY "concerts"."date" ASC[0m  [["band_id", 2]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 33.8ms | Allocations: 1445)
+  [1m[36mConcert Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.723875') LIMIT ?[0m  [["band_id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.760081') LIMIT ?[0m  [["band_id", 4], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.778749') LIMIT ?[0m  [["band_id", 5], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.797392') LIMIT ?[0m  [["band_id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Load (0.4ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.800925') ORDER BY "concerts"."date" ASC[0m  [["band_id", 6]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  Rendered concerts/_concerts.html.erb (Duration: 25.2ms | Allocations: 2325)
+  [1m[36mConcert Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.843183') LIMIT ?[0m  [["band_id", 7], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.867040') LIMIT ?[0m  [["band_id", 8], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.871611') LIMIT ?[0m  [["band_id", 9], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.878075') LIMIT ?[0m  [["band_id", 10], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.917545') LIMIT ?[0m  [["band_id", 11], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.922205') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mConcert Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 22:23:07.929091') LIMIT ?[0m  [["band_id", 13], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:5
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 8.1ms | Allocations: 2222)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 385.4ms | Allocations: 21759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 479ms (Views: 459.8ms | ActiveRecord: 11.5ms | Allocations: 27490)
+
+

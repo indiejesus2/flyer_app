@@ -1,24 +1,5 @@
-<% if !band? %>
-<% Band.all.each do |band| %>
-<% if !band.concerts.current_show.empty? %>
-<h2><%= link_to band.name, band_path(band) %></h2>
-    <% band.concerts.current_show.each do |concert| %>
-        <ul>
-        <h3><%= link_to concert.date, concert_path(concert) %></h3>
-        <p><%= concert.venue.search %> </p>
-        <p>Admission: <%= free?(concert) %></p>
-        </ul>
-<% end %>
-<% end %>
-<% end %>
-<% else %>
 <% concerts.each do |concert| %>
-<%= link_to concert.band.name, band_path(concert.band) %>
 <h3><%= link_to concert.date, concert_path(concert) %></h3>
 <p><%= concert.venue.search %> </p>
-<p>Admission: <%= free?(concert) %></p>
 </ul>
-<% end %>
-
-
 <% end %>

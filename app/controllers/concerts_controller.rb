@@ -10,8 +10,6 @@ class ConcertsController < ApplicationController
             band = Band.find_by_id(params[:band_id])
             @concerts = band.concerts.current_show
             @past = band.concerts.past_show
-        else
-            @concerts = Concert.all.current_show
         end
     end
 
@@ -72,7 +70,7 @@ class ConcertsController < ApplicationController
 
     def logged_in
         if !logged_in?
-            flash[:error] = "You must be logged in to perform that action."
+            flash.now[:error] = "You must be logged in to perform that action."
             redirect_to concerts_path
         end
     end
