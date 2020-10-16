@@ -37982,3 +37982,1717 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 104ms (Views: 72.8ms | ActiveRecord: 0.0ms | Allocations: 13398)
 
 
+Started GET "/signup" for ::1 at 2020-10-16 10:15:55 -0400
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 63.5ms | Allocations: 2029)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 4.2ms | Allocations: 20998)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Signup!</h1>
+
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :band, value: @user.band.name %>
+    <%= f.text_field :band, value: { @user.band.name if @user.band } %>
+    <%= f.hidden_field :uid %>
+    <%= f.submit %>
+<% end %>
+
+<%= link_to 'Log in with Google!', '/auth/google_oauth2' %>
+):
+1:    <h1>Signup!</h1>
+2:    
+3:    <%= form_for @user do |f| %>
+4:        <%= f.label :username %>
+5:        <%= f.text_field :username %>
+6:        <%= f.label :password %>
+7:        <%= f.password_field :password %>
+8:        <%= f.label :email %>
+9:        <%= f.email_field :email %>
+10:        <%= f.label :band, value: @user.band.name %>
+11:        <%= f.text_field :band, value: { @user.band.name if @user.band } %>
+12:        <%= f.hidden_field :uid %>
+13:        <%= f.submit %>
+14:    <% end %>
+15:    
+16:    <%= link_to 'Log in with Google!', '/auth/google_oauth2' %>
+  
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected if (modifier), expecting =>
+app/views/users/new.html.erb:11: syntax error, unexpected '}', expecting ')'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+Started GET "/signup" for ::1 at 2020-10-16 10:16:45 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 47.8ms | Allocations: 1193)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 12.4ms | Allocations: 15351)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Signup!</h1>
+
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :band, value: @user.band.name %>
+    <%= f.text_field :band, value: { if @user.band @user.band.name end } %>
+    <%= f.hidden_field :uid %>
+    <%= f.submit %>
+<% end %>
+
+<%= link_to 'Log in with Google!', '/auth/google_oauth2' %>
+):
+1:    <h1>Signup!</h1>
+2:    
+3:    <%= form_for @user do |f| %>
+4:        <%= f.label :username %>
+5:        <%= f.text_field :username %>
+6:        <%= f.label :password %>
+7:        <%= f.password_field :password %>
+8:        <%= f.label :email %>
+9:        <%= f.email_field :email %>
+10:        <%= f.label :band, value: @user.band.name %>
+11:        <%= f.text_field :band, value: { if @user.band @user.band.name end } %>
+12:        <%= f.hidden_field :uid %>
+13:        <%= f.submit %>
+14:    <% end %>
+15:    
+16:    <%= link_to 'Log in with Google!', '/auth/google_oauth2' %>
+  
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:11: syntax error, unexpected end, expecting then or ';' or '\n'
+app/views/users/new.html.erb:14: syntax error, unexpected end, expecting ')'
+app/views/users/new.html.erb:18: syntax error, unexpected end, expecting ')'
+Started GET "/signup" for ::1 at 2020-10-16 10:17:00 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 151.6ms | Allocations: 3383)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 768ms (Views: 762.3ms | ActiveRecord: 0.0ms | Allocations: 12742)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:19:16 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:19:20 -0400
+Started GET "/auth/google_oauth2/callback?state=7b679b55592c3cb8ed9a8490d140a347a627cd05987342cd&code=4/5QE0-cJaUhtAOmMsnsqvrrIOnaoUmY9k6qYj47Hr0Nx-bjpWHw88QbLuMgyGXAJaGZN_zG2VGW_d3wIRHXWp6yk&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=consent" for ::1 at 2020-10-16 10:19:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"7b679b55592c3cb8ed9a8490d140a347a627cd05987342cd", "code"=>"4/5QE0-cJaUhtAOmMsnsqvrrIOnaoUmY9k6qYj47Hr0Nx-bjpWHw88QbLuMgyGXAJaGZN_zG2VGW_d3wIRHXWp6yk", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"consent"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 17.6ms | Allocations: 1902)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 9.2ms | Allocations: 18166)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:     <%= f.password_field :password %>
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band, value: @user.band.name %>
+    11:     <%= f.text_field :band, value: @user.band.name %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+  
+app/views/users/new.html.erb:10
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=7b679b55592c3cb8ed9a8490d140a347a627cd05987342cd&code=4/5QE0-cJaUhtAOmMsnsqvrrIOnaoUmY9k6qYj47Hr0Nx-bjpWHw88QbLuMgyGXAJaGZN_zG2VGW_d3wIRHXWp6yk&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=consent" for ::1 at 2020-10-16 10:22:40 -0400
+  
+OAuth2::Error (invalid_grant: Bad Request
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}):
+  
+oauth2 (1.4.4) lib/oauth2/client.rb:120:in `request'
+oauth2 (1.4.4) lib/oauth2/client.rb:147:in `get_token'
+oauth2 (1.4.4) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-google-oauth2 (0.8.0) lib/omniauth/strategies/google_oauth2.rb:128:in `client_get_token'
+omniauth-google-oauth2 (0.8.0) lib/omniauth/strategies/google_oauth2.rb:112:in `get_access_token'
+omniauth-google-oauth2 (0.8.0) lib/omniauth/strategies/google_oauth2.rb:92:in `custom_build_access_token'
+omniauth-oauth2 (1.7.0) lib/omniauth/strategies/oauth2.rb:91:in `callback_phase'
+omniauth (1.9.1) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/callback?state=7b679b55592c3cb8ed9a8490d140a347a627cd05987342cd&code=4/5QEGVjGpq20hmleA_OwjZgmOEKosroUWzSLnEEyTkaPAAxzSwWUtu3D4OsepHe3X6zMJgLlW5Xzrv8C1MvJ1w6M&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:22:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"7b679b55592c3cb8ed9a8490d140a347a627cd05987342cd", "code"=>"4/5QEGVjGpq20hmleA_OwjZgmOEKosroUWzSLnEEyTkaPAAxzSwWUtu3D4OsepHe3X6zMJgLlW5Xzrv8C1MvJ1w6M", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 66.7ms | Allocations: 2230)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 2.3ms | Allocations: 8906)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     7:     <%= f.password_field :password %>
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band, value: @user.band.name ? @user.band.name : '' %>
+    11:     <%= f.text_field :band, value: @user.band.name %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+  
+app/views/users/new.html.erb:10
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:29:03 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:29:03 -0400
+Started GET "/auth/google_oauth2/callback?state=d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65&code=4/0AfDhmrhPhX4nfZOb88dPwcml01heLSWY7hvdM-uzJM0vADluDUYsKt_mtChEAnwB6VsRdQ&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:29:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65", "code"=>"4/0AfDhmrhPhX4nfZOb88dPwcml01heLSWY7hvdM-uzJM0vADluDUYsKt_mtChEAnwB6VsRdQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (3.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 582.7ms | Allocations: 76633)
+Completed 500 Internal Server Error in 899ms (ActiveRecord: 8.4ms | Allocations: 91324)
+
+
+  
+ActionView::Template::Error (undefined method `band' for #<#<Class:0x00007f31a4079108>:0x00007f3188b9f238>
+Did you mean?  band?):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/helpers/users_helper.rb:4:in `band?'
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65&code=4/5QGtsuunC4U1YU8MfMB8tsHZY64vvakYRCHHq09O1_bu90g7SqMOf7nzwbvQYcvaSVu5rVna5zk-jXUSBBXozvs&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:29:27 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65", "code"=>"4/5QGtsuunC4U1YU8MfMB8tsHZY64vvakYRCHHq09O1_bu90g7SqMOf7nzwbvQYcvaSVu5rVna5zk-jXUSBBXozvs", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (3.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 63721.3ms | Allocations: 294187)
+Completed 500 Internal Server Error in 64293ms (ActiveRecord: 12.3ms | Allocations: 308583)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `band' for #<#<Class:0x00007f3180b4e188>:0x00007f3180b4c860>
+Did you mean?  band?
+               and):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/helpers/users_helper.rb:5:in `band?'
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65&code=4/5QEGrF9P9_0Je3p7oyrJX60r2hZ_TZKhew30ewLvqrMGCJaA5AWuWzs0kOwtq8bMd--_ChCRR2mlig6f8h-WUpM&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:30:49 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65", "code"=>"4/5QEGrF9P9_0Je3p7oyrJX60r2hZ_TZKhew30ewLvqrMGCJaA5AWuWzs0kOwtq8bMd--_ChCRR2mlig6f8h-WUpM", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 312ms (Views: 77.7ms | ActiveRecord: 6.7ms | Allocations: 19304)
+
+
+Started GET "/auth/google_oauth2/callback?state=d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65&code=4/5QEGrF9P9_0Je3p7oyrJX60r2hZ_TZKhew30ewLvqrMGCJaA5AWuWzs0kOwtq8bMd--_ChCRR2mlig6f8h-WUpM&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:31:29 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:491:in `fail!'
+omniauth-oauth2 (1.7.0) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (1.9.1) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/google_oauth2/callback?state=d7d9e4373a5e86e237767a067a5c475dbd4fe81349233c65&code=4/5QFCMj6uXfVlH-M6Xfv6WA5uLTL8TJA0wIooKjirrFRrcjiRXutLJS8D-bUEsknLE8Speyev6mwnsj55XBuLZ7g&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:31:35 -0400
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:491:in `fail!'
+omniauth-oauth2 (1.7.0) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (1.9.1) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:31:44 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:31:44 -0400
+Started GET "/auth/google_oauth2/callback?state=02b07f7cfd31f3ab5800c4e3b301d5be5923dd1900d71624&code=4/5QGS5QF1ms_FRF1jhsr_vBmSVUFce23Ox89-onvTkSAuB0TT6HtlDHjyI86XI9VE7vuoc1AuylXCZInKnFl5QG8&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:31:48 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"02b07f7cfd31f3ab5800c4e3b301d5be5923dd1900d71624", "code"=>"4/5QGS5QF1ms_FRF1jhsr_vBmSVUFce23Ox89-onvTkSAuB0TT6HtlDHjyI86XI9VE7vuoc1AuylXCZInKnFl5QG8", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 553.9ms | Allocations: 76723)
+Completed 500 Internal Server Error in 796ms (ActiveRecord: 8.4ms | Allocations: 91161)
+
+
+  
+ActionView::Template::Error (undefined method `band?' for #<#<Class:0x00007f3180e97380>:0x00007f3180e955d0>
+Did you mean?  blank?):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=02b07f7cfd31f3ab5800c4e3b301d5be5923dd1900d71624&code=4/5QH6GQDo16yfnLddEj7d6H1XIZbhliYKSbaX8wH756tMVA1Hv3RcEXDF7ekcfbeo496S4klt8Rt8_YTNw6ZguIc&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:32:50 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:33:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 10:33:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"02b07f7cfd31f3ab5800c4e3b301d5be5923dd1900d71624", "code"=>"4/5QH6GQDo16yfnLddEj7d6H1XIZbhliYKSbaX8wH756tMVA1Hv3RcEXDF7ekcfbeo496S4klt8Rt8_YTNw6ZguIc", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1317.3ms | Allocations: 149736)
+Completed 500 Internal Server Error in 1654ms (ActiveRecord: 12.1ms | Allocations: 164182)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fffe4188fd0>:0x00007fffe418ea48>):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/helpers/users_helper.rb:7:in `band?'
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=20b057c7ecd0cf2d4a41f1ceb3ad02c3963410d50200e6fd&code=4/0AfDhmrj13ejbjU4B6Kzk-ooBxZycoCxBW680Mm953CTtZQKMl9fD-ui9oJOIUSDY8T-07A&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:33:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"20b057c7ecd0cf2d4a41f1ceb3ad02c3963410d50200e6fd", "code"=>"4/0AfDhmrj13ejbjU4B6Kzk-ooBxZycoCxBW680Mm953CTtZQKMl9fD-ui9oJOIUSDY8T-07A", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 958.3ms | Allocations: 149721)
+Completed 500 Internal Server Error in 1198ms (ActiveRecord: 3.1ms | Allocations: 155653)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fffe4188fd0>:0x00007f3181eaa2b8>):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/helpers/users_helper.rb:7:in `band?'
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=20b057c7ecd0cf2d4a41f1ceb3ad02c3963410d50200e6fd&code=4/5QG2Vn4QFQJoF1pdwwI1uWRE4FIl-IWr8Ukxx_1DPyZfRThfN7BM8_YLFdmENKIAbol_Ywnhta00qX4kIdJRpW0&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:37:47 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"20b057c7ecd0cf2d4a41f1ceb3ad02c3963410d50200e6fd", "code"=>"4/5QG2Vn4QFQJoF1pdwwI1uWRE4FIl-IWr8Ukxx_1DPyZfRThfN7BM8_YLFdmENKIAbol_Ywnhta00qX4kIdJRpW0", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 85857.4ms | Allocations: 188416)
+Completed 500 Internal Server Error in 86134ms (ActiveRecord: 10.2ms | Allocations: 202818)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f3180f1c0f8>:0x00007f3180f22228>):
+     8:     <%= f.label :email %>
+     9:     <%= f.email_field :email %>
+    10:     <%= f.label :band %>
+    11:     <%= band? %>
+    12:     <%= f.hidden_field :uid %>
+    13:     <%= f.submit %>
+    14: <% end %>
+  
+app/helpers/users_helper.rb:8:in `band?'
+app/views/users/new.html.erb:11
+app/views/users/new.html.erb:3
+app/controllers/sessions_controller.rb:18:in `create'
+Started GET "/auth/google_oauth2/callback?state=20b057c7ecd0cf2d4a41f1ceb3ad02c3963410d50200e6fd&code=4/5QFyGM3XWcj20Y2F2d1JyVE7iNGorqgt9oQWnYdtE87RS89KZbhN3y7hzA5B4vHrKhT_YW3e04KJhhWVbbDFt7E&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 10:39:20 -0400
+Started GET "/signup" for ::1 at 2020-10-16 13:09:35 -0400
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 380.3ms | Allocations: 4167)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1596ms (Views: 1086.8ms | ActiveRecord: 4.7ms | Allocations: 29918)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:09:53 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:09:53 -0400
+Started GET "/auth/google_oauth2/callback?state=14eadce702574a2580c8cd93eb0cfc407f5a1d0e719ca4e7&code=4/5QGz6oJGKZdV3An-N83KemILcRlNvmQarsh_aPgESWgGx4ipBUFN8GvlsFd8LdctgtoksEaX2CBw-v7jR8F4UWk&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:09:57 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"14eadce702574a2580c8cd93eb0cfc407f5a1d0e719ca4e7", "code"=>"4/5QGz6oJGKZdV3An-N83KemILcRlNvmQarsh_aPgESWgGx4ipBUFN8GvlsFd8LdctgtoksEaX2CBw-v7jR8F4UWk", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (3.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 935ms (Views: 230.2ms | ActiveRecord: 10.2ms | Allocations: 13269)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 13:12:31 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1687)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 275664ms (Views: 275562.5ms | ActiveRecord: 18.5ms | Allocations: 90670)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 13:17:07 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1284)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3222ms (Views: 3217.3ms | ActiveRecord: 0.0ms | Allocations: 42097)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:17:25 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:17:25 -0400
+Started GET "/auth/google_oauth2/callback?state=1deb67e04efac22b9138084c8eaeba0a48aba73ea114eebe&code=4/0AfDhmriSVHemImaVaS9IhDvnPlhySM-sNHKvxLtUuEeP8fZFlob5vVbjTEmLK_un5D80sQ&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:18:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"1deb67e04efac22b9138084c8eaeba0a48aba73ea114eebe", "code"=>"4/0AfDhmriSVHemImaVaS9IhDvnPlhySM-sNHKvxLtUuEeP8fZFlob5vVbjTEmLK_un5D80sQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 1650)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 732ms (Views: 351.7ms | ActiveRecord: 3.2ms | Allocations: 12151)
+
+
+Started GET "/login" for ::1 at 2020-10-16 13:20:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 170.0ms | ActiveRecord: 0.0ms | Allocations: 6184)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 13:20:23 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1621)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 111ms (Views: 103.4ms | ActiveRecord: 0.0ms | Allocations: 6505)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:20:35 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:20:36 -0400
+Started GET "/auth/google_oauth2/callback?state=e2229e80d7c99c5d4fe0cb51e591f8bdf905a6c79ab7892e&code=4/5QHhaI0zqtTghT1U44Zrjuou28UnuJW3_h39YdjTDkfTGzsxcE-hrgFyAIb-_H4d9C7bSgDF7Or412s1mRbtZp0&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:20:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"e2229e80d7c99c5d4fe0cb51e591f8bdf905a6c79ab7892e", "code"=>"4/5QHhaI0zqtTghT1U44Zrjuou28UnuJW3_h39YdjTDkfTGzsxcE-hrgFyAIb-_H4d9C7bSgDF7Or412s1mRbtZp0", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1306)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 340ms (Views: 182.2ms | ActiveRecord: 3.1ms | Allocations: 10669)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:24:19 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:24:20 -0400
+Started GET "/auth/google_oauth2/callback?state=ec47e63bef55c6b57f37917d56c35b2602de67b70cf41bf0&code=4/5QHhvHyw5uBfWaNpuTlupOkHnpUTF3xPvb5eq8plJM3pEjgMUHo1scoNkMz_b4OV2ZBnkKobvD2AMltnOsxN3bo&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:24:23 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"ec47e63bef55c6b57f37917d56c35b2602de67b70cf41bf0", "code"=>"4/5QHhvHyw5uBfWaNpuTlupOkHnpUTF3xPvb5eq8plJM3pEjgMUHo1scoNkMz_b4OV2ZBnkKobvD2AMltnOsxN3bo", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1296)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 528ms (Views: 202.6ms | ActiveRecord: 2.4ms | Allocations: 10610)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:26:47 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:26:48 -0400
+Started GET "/auth/google_oauth2/callback?state=6cf2d18454676df168cc3ad996bf40a94b52779f8d87c19a&code=4/0AfDhmriyZEDgmw4j3tLner8csGx8Em6GwrNfJna99i4pXnITnKVg6bKKeD8JvkPuPrHdwQ&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:26:52 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"6cf2d18454676df168cc3ad996bf40a94b52779f8d87c19a", "code"=>"4/0AfDhmriyZEDgmw4j3tLner8csGx8Em6GwrNfJna99i4pXnITnKVg6bKKeD8JvkPuPrHdwQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (6.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1312)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 905ms (Views: 467.2ms | ActiveRecord: 20.2ms | Allocations: 19052)
+
+
+Started GET "/auth/google_oauth2/callback?state=e2229e80d7c99c5d4fe0cb51e591f8bdf905a6c79ab7892e&code=4/5QEG0F5ONjqFeS5PmsD9R36BWiF703G44pm7uOenkwwUhr9GMHw7qaeU_WNzmc24ogXK6DHzHhF-PS7BWAffjNw&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:27:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+OmniAuth::Strategies::OAuth2::CallbackError (csrf_detected | CSRF detected):
+  
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:25:in `raise_out!'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:20:in `call'
+omniauth (1.9.1) lib/omniauth/failure_endpoint.rb:12:in `call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:491:in `fail!'
+omniauth-oauth2 (1.7.0) lib/omniauth/strategies/oauth2.rb:89:in `callback_phase'
+omniauth (1.9.1) lib/omniauth/strategy.rb:238:in `callback_call'
+omniauth (1.9.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.9.1) lib/omniauth/strategy.rb:169:in `call'
+omniauth (1.9.1) lib/omniauth/builder.rb:45:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/concerts" for ::1 at 2020-10-16 13:27:53 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 49.2ms | Allocations: 1137)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.3ms | Allocations: 4115)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: <center><h1><%= band? %> Concerts</h1></center>
+    3: 
+    4: <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+    5: 
+  
+app/helpers/users_helper.rb:4:in `band?'
+app/views/concerts/index.html.erb:2
+Started GET "/concerts" for ::1 at 2020-10-16 13:28:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/dstem/dev/flatiron/labs/flyer_app/app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/concerts_controller.rb:1:in `<main>'
+Started GET "/concerts" for ::1 at 2020-10-16 13:28:55 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 17:28:55.869461') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.5ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.9ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 957.4ms | Allocations: 27712)
+  [1m[36mBand Load (2.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 151.9ms | Allocations: 2341)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 1608.4ms | Allocations: 106495)
+Completed 500 Internal Server Error in 1645ms (ActiveRecord: 26.8ms | Allocations: 108889)
+
+
+  
+ActionView::Template::Error (undefined method `logged_in?' for #<#<Class:0x00007f00a02d05d0>:0x00007f00a02da918>
+Did you mean?  logger?):
+    10: 
+    11: <%= render partial: 'search' %>
+    12: 
+    13: <% if logged_in? %>
+    14: <%= link_to 'New Show', new_concert_path %>
+    15: <% end %>
+  
+app/views/concerts/index.html.erb:13
+Started GET "/concerts" for ::1 at 2020-10-16 13:31:25 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/dstem/dev/flatiron/labs/flyer_app/app/helpers/users_helper.rb:4: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+        if @user form_for @user do |f|
+                 ^~~~~~~~):
+  
+app/helpers/users_helper.rb:4: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/helpers/users_helper.rb:4: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/helpers/users_helper.rb:4: syntax error, unexpected tIDENTIFIER, expecting then or ';' or '\n'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/concerts_controller.rb:1:in `<main>'
+Started GET "/concerts" for ::1 at 2020-10-16 13:31:51 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 71.0ms | Allocations: 1130)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 1.2ms | Allocations: 4115)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: <center><h1><%= band? %> Concerts</h1></center>
+    3: 
+    4: <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+    5: 
+  
+app/helpers/users_helper.rb:4:in `band?'
+app/views/concerts/index.html.erb:2
+Started GET "/concerts" for ::1 at 2020-10-16 13:32:19 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/dstem/dev/flatiron/labs/flyer_app/app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end):
+  
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/helpers/users_helper.rb:17: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/concerts_controller.rb:1:in `<main>'
+Started GET "/concerts" for ::1 at 2020-10-16 13:32:45 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 17:32:45.545507') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (1.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (5.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 617.1ms | Allocations: 26941)
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 93.8ms | Allocations: 2316)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 1736.1ms | Allocations: 178562)
+Completed 500 Internal Server Error in 1789ms (ActiveRecord: 28.3ms | Allocations: 180957)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logged_in' for #<#<Class:0x00007f00ace41f70>:0x00007f00ace4b980>
+Did you mean?  logged_in?):
+    10: 
+    11: <%= render partial: 'search' %>
+    12: 
+    13: <% if logged_in %>
+    14: <%= link_to 'New Show', new_concert_path %>
+    15: <% end %>
+  
+app/views/concerts/index.html.erb:13
+Started GET "/concerts" for ::1 at 2020-10-16 13:33:02 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (0.9ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 17:33:02.822132') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (2.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (1.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.9ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 958.9ms | Allocations: 8657)
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 279.0ms | Allocations: 2276)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 1302.4ms | Allocations: 11566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1512ms (Views: 1480.9ms | ActiveRecord: 10.1ms | Allocations: 16660)
+
+
+Started GET "/login" for ::1 at 2020-10-16 13:33:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1235)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 74.1ms | ActiveRecord: 0.0ms | Allocations: 5698)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 13:33:12 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1699)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 75.2ms | ActiveRecord: 3.1ms | Allocations: 12890)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:33:14 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:33:14 -0400
+Started GET "/auth/google_oauth2/callback?state=086e9508611b21f2bcfe04e0ee2c334f9fd09a96319921b2&code=4/0AfDhmrgfqlZ4uv0e683eKTJdgiRNI7ZbHRD8mpiLFCHZglFker-6DgLJMwoNS1835j_Efw&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:33:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"086e9508611b21f2bcfe04e0ee2c334f9fd09a96319921b2", "code"=>"4/0AfDhmrgfqlZ4uv0e683eKTJdgiRNI7ZbHRD8mpiLFCHZglFker-6DgLJMwoNS1835j_Efw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1308)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 341ms (Views: 153.2ms | ActiveRecord: 2.6ms | Allocations: 11643)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:34:24 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 13:34:24 -0400
+Started GET "/auth/google_oauth2/callback?state=59b8308fdecb55f68123e80b49109677f6fd8f4a9ce6acce&code=4/5QFi0bHy2bY4-rLuxXG0W_ac7bYXla8P16MW7BIBX3UMJ4zekoIaBH6o2psIK_hb420Vq_hCyXKFkyKmOZUi3WE&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 13:34:27 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"59b8308fdecb55f68123e80b49109677f6fd8f4a9ce6acce", "code"=>"4/5QFi0bHy2bY4-rLuxXG0W_ac7bYXla8P16MW7BIBX3UMJ4zekoIaBH6o2psIK_hb420Vq_hCyXKFkyKmOZUi3WE", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 49.1ms | Allocations: 1598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 567ms (Views: 237.4ms | ActiveRecord: 2.3ms | Allocations: 11971)
+
+
+Started POST "/users" for ::1 at 2020-10-16 13:34:36 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"CkdxpXijSWM2N3f9H9J8rqDKVqYXn385awAJvaGwkB2WNjnF1FlrB1nkM6ztEuF1aoAxrO87DF3V+kGu3TzOZg==", "user"=>{"username"=>"luckedout", "password"=>"[FILTERED]", "email"=>"dste.marie@jacksonsd.org", "band"=>"Lucked Out", "uid"=>"111536644676348901910"}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :band[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (4.9ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "Lucked Out"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "luckedout"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 733ms (Views: 110.8ms | ActiveRecord: 6.0ms | Allocations: 12578)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:34:57 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:34:57 -0400
+Started GET "/auth/google_oauth2/callback?state=77beb0775250ffda9becfba8520db13bc6e83e6eb02d8bd7&code=4/5QEpSWuHgqIDBe3_6O444E2wdhEcBJWJz_asHX1bCQVUyL_OEXaZWCGM-4eM72lbASRBAl_fMqX2WYAn47-cQTQ&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 14:35:01 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"77beb0775250ffda9becfba8520db13bc6e83e6eb02d8bd7", "code"=>"4/5QEpSWuHgqIDBe3_6O444E2wdhEcBJWJz_asHX1bCQVUyL_OEXaZWCGM-4eM72lbASRBAl_fMqX2WYAn47-cQTQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1598)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 587ms (Views: 229.8ms | ActiveRecord: 2.9ms | Allocations: 21613)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 14:35:08 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.2ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 18:35:08.421544') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (1.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.9ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.1ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 345.7ms | Allocations: 24592)
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 45.6ms | Allocations: 2316)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 480.8ms | Allocations: 27541)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 617ms (Views: 576.7ms | ActiveRecord: 8.7ms | Allocations: 33764)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:35:57 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1508)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 90.1ms | ActiveRecord: 0.0ms | Allocations: 6367)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:36:05 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 197ms (Views: 187.3ms | ActiveRecord: 0.0ms | Allocations: 5298)
+
+
+Started GET "/login" for ::1 at 2020-10-16 14:36:10 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 118.2ms | ActiveRecord: 0.0ms | Allocations: 6553)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:36:11 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 5031)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:36:38 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1291)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 179ms (Views: 61.7ms | ActiveRecord: 24.5ms | Allocations: 18169)
+
+
+Started GET "/venues" for ::1 at 2020-10-16 14:36:41 -0400
+Processing by VenuesController#index as HTML
+  Rendering venues/index.html.erb within layouts/application
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/venues/index.html.erb:5
+  Rendered venues/index.html.erb within layouts/application (Duration: 52.3ms | Allocations: 6138)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 139.1ms | ActiveRecord: 3.7ms | Allocations: 12267)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 14:36:42 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 904)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 3.6ms | Allocations: 3011)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: 
+    2: <center><h1><%= band? %> Concerts</h1></center>
+    3: 
+    4: <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+    5: 
+  
+app/helpers/users_helper.rb:4:in `band?'
+app/views/concerts/index.html.erb:2
+Started GET "/concerts" for ::1 at 2020-10-16 14:37:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 6917.2ms | Allocations: 44532)
+Completed 500 Internal Server Error in 6971ms (ActiveRecord: 5.1ms | Allocations: 47006)
+
+
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    1: 
+    2: <center><h1><%= band? %> Concerts</h1></center>
+    3: 
+    4: <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+    5: 
+  
+app/helpers/users_helper.rb:6:in `block in band?'
+app/helpers/users_helper.rb:4:in `band?'
+app/views/concerts/index.html.erb:2
+Started GET "/concerts" for ::1 at 2020-10-16 14:37:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  Rendered concerts/index.html.erb within layouts/application (Duration: 98.3ms | Allocations: 7362)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 15.3ms | Allocations: 9754)
+
+
+  
+ActionView::Template::Error (undefined method `band' for nil:NilClass):
+    1: 
+    2: <center><h1><%= band? %> Concerts</h1></center>
+    3: 
+    4: <%= render partial: 'concerts', locals: {concerts: @concerts} %>
+    5: 
+  
+app/helpers/users_helper.rb:5:in `block in band?'
+app/helpers/users_helper.rb:4:in `band?'
+app/views/concerts/index.html.erb:2
+Started GET "/concerts" for ::1 at 2020-10-16 14:38:08 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 18:38:08.375858') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (5.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.4ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 424.1ms | Allocations: 26727)
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 10.7ms | Allocations: 2087)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 473.0ms | Allocations: 28955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 649ms (Views: 605.5ms | ActiveRecord: 23.8ms | Allocations: 34765)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:38:14 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1295)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 175ms (Views: 133.5ms | ActiveRecord: 8.2ms | Allocations: 14103)
+
+
+Started POST "/users" for ::1 at 2020-10-16 14:38:22 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"xIjaAAhAVFcNKd3vhMyq5PX9DQu5iLozp2suiP94cf/h8GoEC1H+wXVZ+N82G4BwbTgsW1sA632RFpx0ekK3BQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "email"=>"", "band"=>"#<Band:0x00007fffccb82dc8>", "uid"=>""}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :band[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "#<Band:0x00007fffccb82dc8>"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 382ms (Views: 138.6ms | ActiveRecord: 3.0ms | Allocations: 11662)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:38:32 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:38:32 -0400
+Started GET "/auth/google_oauth2/callback?state=afee94512bd4a410e8ac233d57100120422bc362993c40fa&code=4/5QEZLcotOgRxva-en0cGDMuWdu1sUgevBNs4O2TkvKT_7yU9jcYj-I5J6tjAP7pOSqQjhuRsQHHgkoIV2_svuGE&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 14:38:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"afee94512bd4a410e8ac233d57100120422bc362993c40fa", "code"=>"4/5QEZLcotOgRxva-en0cGDMuWdu1sUgevBNs4O2TkvKT_7yU9jcYj-I5J6tjAP7pOSqQjhuRsQHHgkoIV2_svuGE", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1164)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 486ms (Views: 178.7ms | ActiveRecord: 3.0ms | Allocations: 10859)
+
+
+Started POST "/users" for ::1 at 2020-10-16 14:39:20 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"hrPXQKpz8Zo0Qy1yPPzT6L804rLtb/vyUL/B6zdzYosawp8gBonT/luQaSPOPE4zdX6FuBXLiJbuRYn4S/888A==", "user"=>{"username"=>"OldSchool", "password"=>"[FILTERED]", "email"=>"dste.marie@jacksonsd.org", "band"=>"School Ties", "uid"=>"111536644676348901910"}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :band[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "School Ties"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "OldSchool"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mCACHE Band Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "School Ties"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Create (4.6ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "School Ties"], ["created_at", "2020-10-16 18:39:21.059231"], ["updated_at", "2020-10-16 18:39:21.059231"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) AND "bands"."id" != ? LIMIT ?[0m  [["name", "School Ties"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (5.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "OldSchool"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dste.marie@jacksonsd.org"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "band_id", "created_at", "updated_at", "uid") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "OldSchool"], ["password_digest", "$2a$12$r1pUII9qcFwlpbCEiH0Kpeekbnfcszjp9fM0T9YrUbh/CTwE.YpFe"], ["email", "dste.marie@jacksonsd.org"], ["band_id", 12], ["created_at", "2020-10-16 18:39:21.355126"], ["updated_at", "2020-10-16 18:39:21.355126"], ["uid", "111536644676348901910"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (26.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/bands/12/edit
+Completed 302 Found in 1018ms (ActiveRecord: 44.3ms | Allocations: 18177)
+
+
+Started GET "/bands/12/edit" for ::1 at 2020-10-16 14:39:21 -0400
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mBand Load (1.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:12:in `edit'
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 200 OK in 206ms (Views: 148.3ms | ActiveRecord: 3.6ms | Allocations: 8671)
+
+
+Started PATCH "/bands/12" for ::1 at 2020-10-16 14:39:34 -0400
+Processing by BandsController#update as HTML
+  Parameters: {"authenticity_token"=>"vI05CEyGb2J+vtw5QYQqUOPjtfXdBY6+pCoxoHG8H68g/HFo4HxNBhFtmGizRLeLKanS/yWh/doa0HmzDTBB1A==", "band"=>{"name"=>"School Ties", "genre"=>"Rap", "city"=>"Brooklyn", "state"=>"New York"}, "commit"=>"Update Band", "id"=>"12"}
+  [1m[36mBand Load (5.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bands_controller.rb:19:in `update'
+  [1m[36mBand Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) AND "bands"."id" != ? LIMIT ?[0m  [["name", "School Ties"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:19:in `update'
+  [1m[36mBand Update (5.1ms)[0m  [1m[33mUPDATE "bands" SET "genre" = ?, "city" = ?, "state" = ?, "updated_at" = ? WHERE "bands"."id" = ?[0m  [["genre", "Rap"], ["city", "Brooklyn"], ["state", "New York"], ["updated_at", "2020-10-16 18:39:35.049905"], ["id", 12]]
+  ↳ app/controllers/bands_controller.rb:19:in `update'
+  [1m[35m (17.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bands_controller.rb:19:in `update'
+Redirected to http://localhost:3000/bands/12/concerts
+Completed 302 Found in 366ms (ActiveRecord: 30.1ms | Allocations: 8837)
+
+
+Started GET "/bands/12/concerts" for ::1 at 2020-10-16 14:39:35 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"12"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (1.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (1.2ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 18:39:35.377383') ORDER BY "concerts"."date" ASC[0m  [["band_id", 12]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  Rendered concerts/_concerts.html.erb (Duration: 6.4ms | Allocations: 678)
+  [1m[36mConcert Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 18:39:35.378662') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mBand Load (2.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 121.4ms | Allocations: 2086)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 291.4ms | Allocations: 4143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 200 OK in 581ms (Views: 450.3ms | ActiveRecord: 7.7ms | Allocations: 10667)
+
+
+Started DELETE "/logout" for ::1 at 2020-10-16 14:39:37 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zu6o91FCcFTwdMCkP4ho+nHyWt3u0e0RZUAjTKfEfH1Sn+CX/bhSMJ+nhPXNSPUhu7g91xZ1nnXbumtf20giBg=="}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 14:39:37 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.5ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 18:39:37.868361') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (1.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (2.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 184.7ms | Allocations: 8505)
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 32.0ms | Allocations: 2084)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 218.8ms | Allocations: 10728)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 289ms (Views: 273.9ms | ActiveRecord: 10.1ms | Allocations: 14676)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:39:41 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 98.2ms | ActiveRecord: 0.0ms | Allocations: 6270)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:41:03 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 38.3ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 170.1ms | ActiveRecord: 0.0ms | Allocations: 6611)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:41:07 -0400
+Started GET "/auth/google_oauth2" for ::1 at 2020-10-16 14:41:07 -0400
+Started GET "/auth/google_oauth2/callback?state=d7ebf218e24d723846382be3b12c7ad3327ea70e5bdcc3f2&code=4/5QHzjj2HsK7-ESqU7JkyLdis6kT2-Xxa-vduOBUKgSZ39P8fHvrgg__l820PNXMHyB0FMiFBoRPJA4NMaL4twaA&scope=email%20profile%20openid%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=jacksonsd.org&prompt=none" for ::1 at 2020-10-16 14:41:10 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"d7ebf218e24d723846382be3b12c7ad3327ea70e5bdcc3f2", "code"=>"4/5QHzjj2HsK7-ESqU7JkyLdis6kT2-Xxa-vduOBUKgSZ39P8fHvrgg__l820PNXMHyB0FMiFBoRPJA4NMaL4twaA", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"jacksonsd.org", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "111536644676348901910"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15:in `create'
+Redirected to http://localhost:3000/bands/12/concerts
+Completed 302 Found in 101ms (ActiveRecord: 1.5ms | Allocations: 1531)
+
+
+Started GET "/bands/12/concerts" for ::1 at 2020-10-16 14:41:10 -0400
+Processing by ConcertsController#index as HTML
+  Parameters: {"band_id"=>"12"}
+[31mUnpermitted parameter: :band_id[0m
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/concerts_controller.rb:10:in `index'
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/helpers/concerts_helper.rb:5:in `band?'
+  [1m[36mConcert Load (0.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE "concerts"."band_id" = ? AND (date >= '2020-10-16 18:41:10.951363') ORDER BY "concerts"."date" ASC[0m  [["band_id", 12]]
+  ↳ app/views/concerts/_concerts.html.erb:1
+  Rendered concerts/_concerts.html.erb (Duration: 28.0ms | Allocations: 864)
+  [1m[36mConcert Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "concerts" WHERE "concerts"."band_id" = ? AND (date < '2020-10-16 18:41:10.952817') LIMIT ?[0m  [["band_id", 12], ["LIMIT", 1]]
+  ↳ app/views/concerts/index.html.erb:6
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 64.8ms | Allocations: 2317)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 165.6ms | Allocations: 5035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 200 OK in 299ms (Views: 255.6ms | ActiveRecord: 7.9ms | Allocations: 10930)
+
+
+Started DELETE "/logout" for ::1 at 2020-10-16 14:41:17 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VgyvfMlWbSd25hk8Fo6rZAt/jnox9rY6pNcES8OIJUMMTHLI0KYV9+PMc+4OEWGy/bV+Vj+osGEP47CH2w13SA=="}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 14:41:17 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (3.0ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 18:41:17.671155') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 182.4ms | Allocations: 8504)
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.6ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 32.5ms | Allocations: 2084)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 217.0ms | Allocations: 10728)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 286ms (Views: 274.4ms | ActiveRecord: 9.1ms | Allocations: 14639)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:41:20 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1288)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 0.0ms | Allocations: 5793)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:41:32 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 53.3ms | Allocations: 1635)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 216ms (Views: 200.9ms | ActiveRecord: 0.0ms | Allocations: 6897)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:47:50 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 45.7ms | Allocations: 1553)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 172ms (Views: 105.8ms | ActiveRecord: 0.0ms | Allocations: 18723)
+
+
+Started POST "/users" for ::1 at 2020-10-16 14:48:20 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"s1fZyQjqHStp/viMwpFQ06TjirqYesWlzyB+5aait28/5fwRGw8NsIAz6xGdvePQIR1Jgvh9LIz4ptn3EJ5Fug==", "user"=>{"username"=>"H2O", "password"=>"[FILTERED]", "email"=>"h2o@aol.com", "band"=>"H2O", "uid"=>""}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :band[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "H2O"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "H2O"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h2o@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mCACHE Band Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "H2O"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Create (5.4ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "H2O"], ["created_at", "2020-10-16 18:48:20.894069"], ["updated_at", "2020-10-16 18:48:20.894069"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) AND "bands"."id" != ? LIMIT ?[0m  [["name", "H2O"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "H2O"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h2o@aol.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "band_id", "created_at", "updated_at", "uid") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "H2O"], ["password_digest", "$2a$12$EfbPXhqAQ0BnjgWhv0XPqu/8AbkdQAFOSymVCq1v1FhUiBWqE/WUq"], ["email", "h2o@aol.com"], ["band_id", 13], ["created_at", "2020-10-16 18:48:21.002640"], ["updated_at", "2020-10-16 18:48:21.002640"], ["uid", ""]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (19.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/bands/13/edit
+Completed 302 Found in 681ms (ActiveRecord: 30.1ms | Allocations: 17775)
+
+
+Started GET "/bands/13/edit" for ::1 at 2020-10-16 14:48:21 -0400
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mBand Load (0.9ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:38:in `find_band'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mBand Load (2.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:12:in `edit'
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1461)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+Completed 200 OK in 160ms (Views: 97.5ms | ActiveRecord: 4.2ms | Allocations: 9737)
+
+
+Started DELETE "/logout" for ::1 at 2020-10-16 14:48:26 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rkPO6u0hgPznDqDJSSkTVnY72juICA5E3iZIj+aMGZYi8esy/sSQZw7Ds1QWBaBV88UZA+gP523poO+dULDrQw=="}
+Redirected to http://localhost:3000/concerts
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Started GET "/concerts" for ::1 at 2020-10-16 14:48:26 -0400
+Processing by ConcertsController#index as HTML
+  Rendering concerts/index.html.erb within layouts/application
+  [1m[36mConcert Load (1.8ms)[0m  [1m[34mSELECT "concerts".* FROM "concerts" WHERE (date >= '2020-10-16 18:48:26.425504') ORDER BY "concerts"."date" ASC[0m
+  ↳ app/views/concerts/_concerts.html.erb:1
+  [1m[36mBand Load (1.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (1.3ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.0ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mCACHE Venue Load (0.2ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  [1m[36mCACHE Band Load (0.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:3
+  [1m[36mVenue Load (0.7ms)[0m  [1m[34mSELECT "venues".* FROM "venues" WHERE "venues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/concerts/_concerts.html.erb:7
+  Rendered concerts/_concerts.html.erb (Duration: 401.7ms | Allocations: 20403)
+  [1m[36mBand Load (3.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/concerts/_search.html.erb:4
+  [1m[36mVenue Load (0.8ms)[0m  [1m[34mSELECT "venues".* FROM "venues"[0m
+  ↳ app/views/concerts/_search.html.erb:5
+  Rendered concerts/_search.html.erb (Duration: 61.7ms | Allocations: 2387)
+  Rendered concerts/index.html.erb within layouts/application (Duration: 479.7ms | Allocations: 23431)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 606ms (Views: 570.8ms | ActiveRecord: 11.6ms | Allocations: 29375)
+
+
+Started GET "/signup" for ::1 at 2020-10-16 14:48:29 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 97.3ms | ActiveRecord: 0.0ms | Allocations: 4992)
+
+
+Started POST "/users" for ::1 at 2020-10-16 14:48:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"9kycHvIRH5bz2GphX7UE4F1q7BKNO5hc/nKJNRWiP+O0d0T/GKnWBQi+iKrMnxy8Qr4G2b3z3PFa648dCfSlNw==", "user"=>{"username"=>"h2o", "password"=>"[FILTERED]", "email"=>"h2o@yahoo.com", "band"=>"H2O", "uid"=>""}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :band[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mBand Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE LOWER("bands"."name") = LOWER(?) LIMIT ?[0m  [["name", "H2O"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "h2o"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "h2o@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 565ms (Views: 68.6ms | ActiveRecord: 6.3ms | Allocations: 11292)
+
+

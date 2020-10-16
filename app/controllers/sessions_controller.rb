@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
                 session[:user_id] = @user.id
                 redirect_to band_concerts_path(@user.band)
             else
-                byebug
+                flash[:message] = "Complete Signup Form"
                 render 'users/new'
             end
         else
