@@ -13,15 +13,17 @@
     <center><h1>Flyer-App!</h1></center>
     <%= link_to 'Concerts', concerts_path %>
     <%= link_to 'Bands', bands_path %>
-    <%= link_to 'Venues', venues_path %> <br>
+    <%= link_to 'Venues', venues_path %>
+    <%= my_band %> <br>
     <% flash.keys.each do |type| %>
-    <br><%= flash.now[type] %>
+    <br><%= flash[type] %>
     <% end %>
     <%= yield %>
   </body>
 </html>
 <br><br>
 <div class="footer">
+
 <% if !!current_user %>
 <%= link_to 'Logout', '/logout', method: 'delete' %>
 <% else %>
