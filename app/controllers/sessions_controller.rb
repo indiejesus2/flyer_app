@@ -4,19 +4,40 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user = User.find_by(username: params[:user][:username])
-        if user && user.authenticate(params[:user][:password])
-            session[:user_id] = user.id
-            redirect_to band_concerts_path(user.band)
+        if auth
+            @user = User.find_or_create_by(uid: auth['uid']) do |u|
+                u.email = auth['info']['email']
+                u.uid = auth['uid']
+            end
+
+            if @user.persisted?
+                session[:user_id] = @user.id
+                redirect_to band_concerts_path(@user.band)
+            else
+                byebug
+                render 'users/new'
+            end
         else
-            flash[:error] = "Invalid Username/Password. Please try again."
-            render :new
+            user = User.find_by(username: params[:user][:username])
+            if user && user.authenticate(params[:user][:password])
+                session[:user_id] = user.id
+                redirect_to band_concerts_path(user.band)
+            else
+                flash[:error] = "Invalid Username/Password. Please try again."
+                render :new
+            end
         end
     end
 
     def destroy
         session.clear
         redirect_to concerts_path
+    end
+
+    private
+
+    def auth
+        request.env['omniauth.auth']
     end
 
 end

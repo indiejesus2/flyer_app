@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   get '/signup' => 'users#new'
   get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
+  get 'auth/google_oauth2/callback', to: 'sessions#create'
+  # post '/login', to: 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   
   resources :users 

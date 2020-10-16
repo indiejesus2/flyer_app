@@ -28,7 +28,6 @@ class ConcertsController < ApplicationController
             flash[:error] = @concert.errors.full_messages
             render :new
         end
-
     end
 
     def show

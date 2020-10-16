@@ -4,6 +4,9 @@
     <%= f.text_field :username %>
     <%= f.password_field :password %>
     <%= f.email_field :email %>
-    <%= f.text_field :band, value: @user.band.name %>
+    <%= f.text_field :band %>
+    <%= f.hidden_field :uid %>
     <%= f.submit %>
 <% end %>
+
+<%= link_to 'Log in with Google!', '/auth/google_oauth2' %>

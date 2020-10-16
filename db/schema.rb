@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_30_171724) do
+ActiveRecord::Schema.define(version: 2020_10_16_013320) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_09_30_171724) do
     t.integer "band_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "uid"
     t.index ["band_id"], name: "index_users_on_band_id"
   end
 
