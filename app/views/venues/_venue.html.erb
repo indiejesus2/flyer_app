@@ -4,5 +4,6 @@
 <p>Crowd Capacity: <%= venue.crowd_capacity %></p>
 <p><%= street_parking? venue %></p>
 
-
+<% if logged_in? %>
 <%= link_to 'New Show', new_venue_concert_path(venue) %>
+<% end %>

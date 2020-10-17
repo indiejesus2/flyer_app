@@ -1,3 +1,5 @@
 <%= render partial: 'venue', locals: {venue: @venue} %>
 
+<% if logged_in? %>
 <%= link_to 'Edit Venue', edit_venue_path(@venue) %>
+<% end %>   

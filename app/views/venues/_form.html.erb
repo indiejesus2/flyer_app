@@ -1,7 +1,7 @@
 <%= form_for venue do |f| %>
     Name: <%= f.text_field :name %> <br>
-    Location: <%= f.text_field :city %> City <%= f.text_field :state %> State <br>
+    City: <%= f.text_field :city %> State: <%= f.text_field :state %> <br>
     Crowd Capacity: <%= f.number_field :crowd_capacity %> <br>
-    Parking?: Yes <%= check_box("venue", "parking", {}, "yes") %> <br>
+    Parking?: Yes <%= check_box("venue", "parking", {}, "true", "false") %> <br>
     <%= f.submit %>
 <% end %>

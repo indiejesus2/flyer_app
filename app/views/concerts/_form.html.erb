@@ -1,6 +1,6 @@
 <%= form_for concert do |f| %>
     Date: <%= f.date_field :date %>
-    Admission: <%= f.number_field :admission %>
+    Admission: <%= f.number_field :admission, value: 0 %>
     <br>
     <% if venue_id %>
     <%= f.hidden_field :venue_id, value: venue_id %>

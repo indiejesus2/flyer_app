@@ -1,7 +1,7 @@
 class ConcertsController < ApplicationController
-    before_action :set_band, only: [:new, :create, :update]
+    before_action :set_band, only: [:new, :create, :update, :destroy]
     before_action :set_concert, only: [:show, :edit, :update, :destroy]
-    before_action :logged_in, only: [:new, :create, :update]
+    skip_before_action :require_login, only: [:index, :show]
 
     def index
         if !search_params.blank?
@@ -23,7 +23,7 @@ class ConcertsController < ApplicationController
         if @concert.save
             redirect_to concert_path(@concert)
         else
-            flash[:error] = @concert.errors.full_messages
+            flash.now[:error] = @concert.errors.full_messages
             render :new
         end
     end
@@ -66,13 +66,6 @@ class ConcertsController < ApplicationController
 
     def search_params
         params.permit(:band, :venue, :date)
-    end
-
-    def logged_in
-        if !logged_in?
-            flash.now[:error] = "You must be logged in to perform that action."
-            redirect_to concerts_path
-        end
     end
 
 end

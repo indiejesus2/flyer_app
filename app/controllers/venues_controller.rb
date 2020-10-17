@@ -1,5 +1,7 @@
 class VenuesController < ApplicationController
+    skip_before_action :require_login, only: [:index, :show]
     before_action :set_venue, only: [:show, :edit, :update, :destroy]
+    
 
     def index
         @venues = Venue.all
@@ -38,6 +40,10 @@ class VenuesController < ApplicationController
 
     def set_venue
         @venue = Venue.find(params[:id])
+    end
+
+    def checkbox
+        parking = params[:parking]
     end
 
 end
