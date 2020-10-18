@@ -1,16 +1,14 @@
 <center><h1><%= band? %> Concerts</h1></center>
 
 <% if !band? %>
-    <% Band.all.each do |band| %>
-        <% if !band.concerts.current_show.empty? %>
-            <h2><%= link_to band.name, band_path(band) %></h2>
-            <%= render partial: 'concerts', locals: {concerts: band.concerts.current_show} %>
-            <% end %>
+    <% @concerts.each do |band, concert| %>
+        <% band = Band.find(band) %>
+        <h2><%= link_to band.name, band_path(band) if !concert.blank? %></h2>
+        <%= render partial: 'concerts', locals: {concerts: concert} %>
     <% end %>
 <% else %>
     <%= render partial: 'concerts', locals: {concerts: @concerts} %>
 <% end %>
-    
 
 <% if @past && !@past.empty? %>
 <center><h3>Past Shows</h3></center>
@@ -19,6 +17,4 @@
 
 <%= render partial: 'search' %>
 
-<% if logged_in? %>
-<%= link_to 'New Show', new_concert_path %>
-<% end %>
+<%= link_to 'New Show', new_concert_path if logged_in? %>

@@ -4,12 +4,26 @@ class ConcertsController < ApplicationController
     skip_before_action :require_login, only: [:index, :show]
 
     def index
+        @bands = Band.all
+        @concerts = {}
         if !search_params.blank?
-            @concerts = Concert.search(search_params).current_show
+            if !search_params[:band].blank?
+                band = Band.find(search_params[:band])
+                @concerts = band.concerts.search(search_params).current_show
+                byebug
+            else
+                @bands.each do |band|
+                    @concerts.merge!({"#{band.id}" => band.concerts.search(search_params).current_show })
+                end
+            end
         elsif params[:band_id]
             band = Band.find_by_id(params[:band_id])
             @concerts = band.concerts.current_show
             @past = band.concerts.past_show
+        else
+            @bands.each do |band|
+                @concerts.merge!({"#{band.id}" => band.concerts.current_show})
+            end
         end
     end
 

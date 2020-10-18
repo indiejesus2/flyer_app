@@ -6,12 +6,4 @@ module ApplicationHelper
         end
     end
 
-    # def errors(flash)
-    #     flash.keys.each do |type|
-    #         flash[type]
-    #     end
-    # end
-    
-
-
 end

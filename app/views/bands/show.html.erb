@@ -2,6 +2,6 @@
 <p>Hometown - <%= location %>
 <p><%= @band.genre %></p>
 <%= link_to 'Concerts', band_concerts_path(@band) %>
-<% if current_user && @band == current_user.band %>
+<% if logged_in? && @band == current_user.band %>
 <%= link_to 'Edit Band', edit_band_path(@band) %>
 <% end %>

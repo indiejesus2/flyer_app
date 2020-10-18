@@ -24,7 +24,7 @@
 <br><br>
 <div class="footer">
 
-<% if !!current_user %>
+<% if logged_in? %>
 <%= link_to 'Logout', '/logout', method: 'delete' %>
 <% else %>
 <%= link_to 'Signup', '/signup' %>
