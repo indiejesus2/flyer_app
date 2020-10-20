@@ -17,4 +17,4 @@
 
 <%= render partial: 'search' %>
 
-<%= link_to 'New Show', new_concert_path if logged_in? %>
+<%= link_to 'New Show', new_band_concert_path(current_user.band) if logged_in? %>

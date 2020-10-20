@@ -36,6 +36,7 @@ class ConcertsController < ApplicationController
         if @concert.save
             redirect_to concert_path(@concert)
         else
+            byebug
             flash.now[:error] = @concert.errors.full_messages
             render :new
         end
