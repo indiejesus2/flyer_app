@@ -1,19 +1,27 @@
 <%= form_for concert do |f| %>
     Date: <%= f.date_field :date %>
+    <% if !concert.admission.blank? %>
+    Admission: <%= f.number_field :admission %>
+    <% else %>
     Admission: <%= f.number_field :admission, value: 0 %>
+    <% end %>
     <br>
     <% if venue_id %>
     <%= f.hidden_field :venue_id, value: venue_id %>
     <% else %>
     <p>Venues <%= f.collection_select(:venue_id, Venue.all, :id, :name, include_blank: 'Choose One') %></p><br>
+    <% end %>    
     <br>
     <h3>New Venue</h3>
     <%= f.fields_for :venue, Venue.new do |v| %>
     Name: <%= v.text_field :name %> <br>
     City: <%= v.text_field :city %> State: <%= v.text_field :state %> <br>
     Crowd Capacity: <%= v.number_field :crowd_capacity %> <br>
-    Parking?: Yes <%= check_box("venue", "parking", {}, "true", "false") %> <br>
-    <% end %>    
+    <% if v.blank? %>
+    <%= v.hidden_field :parking, value: "" %>
+    <% else %>
+    Parking?: <%= v.select(:parking, [['Yes', 1], ['No', 0]], include_blank: true ) %> <br>
+    <% end %>
     <% end %> <br>
     <%= f.submit %>
 <% end %>

@@ -2,6 +2,10 @@
     Name: <%= f.text_field :name %> <br>
     City: <%= f.text_field :city %> State: <%= f.text_field :state %> <br>
     Crowd Capacity: <%= f.number_field :crowd_capacity %> <br>
-    Parking?: Yes <%= check_box("venue", "parking", {}, "true", "false") %> <br>
+    <% if venue.parking %>
+    Parking: <%= f.select(:parking, [["Yes", true], ["No", false]], value: venue.parking) %> <br>
+    <% else %>
+    Parking: <%= f.select(:parking, [["Yes", true], ["No", false]], include_blank: true) %> <br>
+    <% end %>
     <%= f.submit %>
 <% end %>

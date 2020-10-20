@@ -10,7 +10,6 @@ class ConcertsController < ApplicationController
             if !search_params[:band].blank?
                 band = Band.find(search_params[:band])
                 @concerts = band.concerts.search(search_params).current_show
-                byebug
             else
                 @bands.each do |band|
                     @concerts.merge!({"#{band.id}" => band.concerts.search(search_params).current_show })

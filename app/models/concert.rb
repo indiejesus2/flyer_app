@@ -24,7 +24,7 @@ class Concert < ApplicationRecord
   end
 
   def in_future?
-    if date.present? && date < Date.today
+    if date < Date.today
       errors.add(:date, "can't be in the past")
     end
   end
