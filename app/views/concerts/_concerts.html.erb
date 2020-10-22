@@ -1,5 +1,4 @@
-
 <% concerts.each do |gig| %>
-        <h3><%= link_to gig.date, concert_path(gig) %></h3>
+        <h3><%= link_to gig.date, band_concert_path(gig.band, gig) %></h3>
         <p><%= gig.venue.search %> </p>
 <% end %>
