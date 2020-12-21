@@ -12,7 +12,7 @@ The concerts index includes search options to filter by band, venue or date. The
 
 ## Install
 
-In order to run application successfully, first run bundle install for the necessarty gems to be installed. This includes bcrypt to hide users passwords, the Google omni-auth for Google login, and dotenv for Rails to prevent Google client_ids and secrets from posting on GitHub.
+In order to run application successfully, first run bundle install for the necessary gems to be installed. This includes bcrypt to hide users passwords, the Google omni-auth for Google login, and dotenv for Rails to prevent Google client_ids and secrets from posting on GitHub.
 
 Next, for the Google omni-auth gem to property work, a Google API must be setup. This will provide the necessary Google client_ids and secret to establish connection between the app and Google. Then a .env file should be created in the root where the Google information will be stored.
 
