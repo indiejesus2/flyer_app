@@ -4,7 +4,7 @@ class BandsController < ApplicationController
 
 
     def index
-        @bands = Band.all
+        @bands = Band.all.order(:name)
     end
 
     def show

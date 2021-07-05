@@ -11,8 +11,13 @@ class VenuesController < ApplicationController
     end
 
     def create
-        @venue = Venue.create(venue_params)
-        redirect_to venues_path
+        @venue = Venue.new(venue_params)
+        if @venue.save
+            redirect_to venues_path
+        else
+            flash[:error] = @venue.errors.full_messages
+            render :new
+        end
     end
 
     def show

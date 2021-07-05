@@ -10,14 +10,19 @@
   </head>
 
   <body>
+<div class="container">
+            <div class="jumbotron">                
     <center><h1>Flyer-App!</h1></center>
     <%= link_to 'Concerts', concerts_path %>
     <%= link_to 'Bands', bands_path %>
     <%= link_to 'Venues', venues_path %>
     <%= my_band %> <br>
     <% flash.keys.each do |type| %>
+
     <br><%= flash[type] %>
     <% end %>
+    </div>
+    </div>
     <%= yield %>
   </body>
 </html>

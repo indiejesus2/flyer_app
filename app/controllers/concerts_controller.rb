@@ -34,9 +34,8 @@ class ConcertsController < ApplicationController
     def create
         @concert = @band.concerts.new(concert_params)
         if @concert.save
-            redirect_to concert_path(@concert)
+            redirect_to band_concert_path(@band, @concert)
         else
-            byebug
             flash.now[:error] = @concert.errors.full_messages
             render :new
         end
@@ -52,7 +51,7 @@ class ConcertsController < ApplicationController
     def update
         @concert.update(concert_params)
         if @concert.save
-            redirect_to concert_path(@concert)
+            redirect_to band_concert_path(@band, @concert)
         else
             flash[:error] = @concert.errors.full_messages
             render :edit
@@ -75,7 +74,13 @@ class ConcertsController < ApplicationController
     end
 
     def set_concert
-        @concert = Concert.find(params[:id])
+        band = Band.find_by(id: params[:band_id])
+        if band.nil?
+            redirect_to bands_path, alert: "Band not found."
+        else
+            @concert = band.concerts.find_by(id: params[:id])
+            redirect_to concerts_path, alert: "Concert not found." if @concert.nil?
+        end
     end
 
     def search_params

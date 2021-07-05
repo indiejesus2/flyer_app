@@ -1,4 +1,11 @@
-<h1>Bands</h1>
-<% @bands.each do |band| %>
-<%= link_to band.name, band_path(band) %> <br>
-<% end %>
+    <h1 class="card-title">Bands</h1>
+        <% @bands.each do |band| %>
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <span class="card-link">
+        <%= link_to band.name, band_path(band) %> <br>
+        </span>
+    </div>
+</div>
+    <% end %>
